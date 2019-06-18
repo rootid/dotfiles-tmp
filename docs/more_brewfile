@@ -174,7 +174,3 @@ brew install vbindiff
 brew install zopfli
 brew install stow`
 
-### Taskwarrior
-brew install task
-brew install taskd
-brew install tasks

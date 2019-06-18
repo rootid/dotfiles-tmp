@@ -7,13 +7,23 @@ DOT_FILES = ack bash editorconfig git ssh tmux vim wget
 #HOME_DIR = ${HOME}
 #CWD = ${PWD}
 
+.PHONY: install update add-fonts add-configs
+
 install:
-	@echo "Running install"
+	@echo "Installing Homebrew on mac"
 	homebrew/install.sh
 
 update:
-	@echo "Running install"
+	@echo "Adding required applications"
 	brew bundle
+
+add-fonts:
+	@echo "Adding font"
+	fonts/install.sh
+		
+add-configs:
+	@echo "Adding config"
+	@stow -t ~ config -vvv
 
 #all: clean vim_link dot_link
 #
@@ -43,4 +53,5 @@ update:
 #	@echo "Remove Symlink $(HOME)/.$@"
 #	@$(RM) $(HOME)/.$@ 2>/dev/null
 #
+
 ## vim: noexpandtab

@@ -351,7 +351,7 @@ autocmd FileType c,cpp,java,go,javascript,python,rst,ruby,rust,yml,perl autocmd 
 autocmd FileType haskell,python,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 
 autocmd FileType java source $HOME/v2.config/vim/.vim/vim.addons/jcommenter.vim
-source $HOME/v2.config/vim/.vim/vim.addons/newline_after_given_patterns.vim
+"source $HOME/v2.config/vim/.vim/vim.addons/newline_after_given_patterns.vim
 
 set splitright           " Puts new vsplit windows to the right of the current
 set splitbelow           " Puts new split windows to the bottom of the current

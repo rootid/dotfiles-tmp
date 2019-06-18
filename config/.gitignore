@@ -6,9 +6,7 @@ Thumbs.db
 *.swo
 .direnv
 .envrc
-.editorconfig
 myvim.rc
-*.out
 
 # For local dev
 fix.out

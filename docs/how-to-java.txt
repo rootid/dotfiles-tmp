@@ -1,0 +1,2 @@
+# How to set up maven?
+ln -sf /Users/$USER/devtools/maven/3.0.5/bin/mvn /usr/local/bin/mvn

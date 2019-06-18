@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+#brew 'ssh-copy-id'
 #brew 'ack'
 #brew 'coreutils'
 #brew 'go'
@@ -34,4 +35,13 @@ tap 'homebrew/bundle'
 #cask 'evernote'
 #cask 'dropboxii'
 #cask 'google-backup-and-sync'
-cask 'imageoptim'
+#cask 'imageoptim'
+#cask 'dbeaver-community'
+#cask 'docker'
+#cask 'virtualbox'
+cask 'meld'
+
+## Taskwarrior
+#brew 'task'
+#brew 'taskd'
+#brew 'tasks'

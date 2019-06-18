@@ -1,4 +1,3 @@
-
 [diff]
   tool = vimdiff
 
@@ -11,17 +10,17 @@
 
 [core]
   excludesfile = ~/.gitignore
-  #hooksPath = ~/git.hooks
+  # hooksPath = ~/git.hooks
 [init]
 
 [alias]
 
-  #Update config {
+  # Update config {
     cfgu = config user.name
     cfge = config user.email
   # }
 
-  #Get remote and opern {
+  # Get remote and opern {
     cln = clone
     stat = status
 
@@ -33,7 +32,7 @@
     p  = push
   # }
 
-  #Start dev {
+  # Start dev {
     f = fetch
     co = checkout
     cob = checkout -b
@@ -63,16 +62,16 @@
 
   # }
 
-  #Get all changes {
+  # Get all changes {
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
   # }
 
-  #Local branch operations {
+  # Local branch operations {
 
     # Amend the currently staged files to the latest commit
     amd = commit --amend --reuse-message=HEAD
 
-    #custom mesage
+    # custom mesage
     c = commit
     cm = !git add -A && git commit -m
 
@@ -84,48 +83,47 @@
     who = shortlog -s --
   # }
 
-  #Diffing
+  # Diffing
   dc = diff --cached
   df = diff
   diff = diff --word-diff
 
-  #Raise PR
+  # Raise PR
   bclean = "!f() { git branch --merged ${1-develop} | grep -v " ${1-develop}$" | xargs git branch -d; }; f"
   bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
 
-  #lg = log -p
+  # lg = log -p
   lg = log --oneline --decorate
   cf = "!git status --porcelain | awk '{print $2}'"
   g = log --graph --topo-order --decorate --oneline --all
 
-  #Fetch all submodules
+  # Fetch all submodules
   mu = "!f() { git pull && git submodule init && git submodule update; }; f"
 
-  #Resolve conflict {
+  # Resolve conflict {
     gte = checkout --theirs
     gto = checkout --ours
     cp = cherry-pick
   #}
 
   del = "git status | grep 'deleted' | cut -d ':' -f2 | xargs git rm"
-  #Git commited files with username
+  # Git commited files with username
   lf = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-  #Git log with dates eg git lds -4
+  # Git log with dates eg git lds -4
   lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 
-  #List all aliases
+  # List all aliases
   la = "!git config -l | grep alias | cut -c 7-"
   dl = "!git ll -1"
   fl = log -u
 
-  #rebase git interactively
+  # rebase git interactively
   rb =  rebase -i
-  #Reset branches
+  # Reset branches
   r = reset
   r1 = reset HEAD^
 
-
-  #Merge diff {
+  # Merge diff {
     accept-ours = "!f() { [ -z \"$@\" ] && set - '.'; git checkout --ours -- \"$@\"; git add -u -- \"$@\"; }; f"
     accept-theirs = "!f() { [ -z \"$@\" ] && set - '.'; git checkout --theirs -- \"$@\"; git add -u -- \"$@\"; }; f"
   #}
@@ -161,9 +159,9 @@
 [hub]
 	protocol = https
 
-# vim: ai ts=2 sw=2 et sts=2 fdm=marker fmr={,}
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+# vim: ai ts=2 sw=2 et sts=2 fdm=marker fmr={,}

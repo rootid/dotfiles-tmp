@@ -1,2 +1,0 @@
-# set up MVN
-ln -sf /Users/visawant/devtools/maven/3.0.5/bin/mvn /usr/local/bin/mvn

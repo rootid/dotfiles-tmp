@@ -14,15 +14,18 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-## Terminal
+# Rename terminal
 PS1="\u@mat \W\$ "
 
-## TODO:
-eval "$(direnv hook bash)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Sourcing aliases
+DOT_CONF_DIR=~/dotfiles
+
+source $DOT_CONF_DIR/firefox/aliases.sh
+source $DOT_CONF_DIR/git/aliases.sh
+source $DOT_CONF_DIR/ack/aliases.sh
+source $DOT_CONF_DIR/tmux/aliases.sh
+source $DOT_CONF_DIR/docker/aliases.sh
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
@@ -31,18 +34,17 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-source ~/aliases.sh
-source ~/git-completion.bash
-source ~/network.sh
-source ~/wunderline_helper.sh
+#source ~/aliases.sh
+#source ~/git-completion.bash
+#source ~/network.sh
+#source ~/wunderline_helper.sh
 # For work remove
-source ~/work.sh
+#source ~/work.sh
 
 CUSTOM_BIN=$HOME/v2.config/bin
 export PATH=$CUSTOM_BIN:$PATH
-export PATH=$HOME/gocode/bin:$PATH
 
-source /usr/local/etc/bash_completion.d/password-store
+#source /usr/local/etc/bash_completion.d/password-store
 
 GIT_HUB_WRAPPER_LIB=$HOME/new-wave/git-hub/lib
 GIT_HUB_WRAPPER_MAN=$HOME/new-wave/git-hub/man
@@ -61,5 +63,5 @@ export REVIEW_BASE=master
 
 source /usr/local/opt/autoenv/activate.sh
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 # vim: ai ts=2 sw=2 et sts=2 ft=sh
