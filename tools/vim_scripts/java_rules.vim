@@ -1,5 +1,5 @@
 
-source ~/.vim/vim.addons/jcommenter.vim
+source ~/vim_scripts/jcommenter.vim
 map ,c1 :call JCommentWriter()<CR>
 "let @a = ',c1 nn'
 

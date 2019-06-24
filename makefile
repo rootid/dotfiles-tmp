@@ -20,10 +20,19 @@ update:
 add-fonts:
 	@echo "Adding font"
 	fonts/install.sh
-		
+
 add-configs:
 	@echo "Adding config"
 	@stow -t ~ config -vvv
+
+tools:
+	@echo "Updating tools shortcuts"
+	@stow -t ~ tools --no-folding -vvv
+
+update-vim:
+	@echo "Updating vim"
+	@stow -t ~ vim --no-folding -vvv
+
 
 #all: clean vim_link dot_link
 #
@@ -54,4 +63,4 @@ add-configs:
 #	@$(RM) $(HOME)/.$@ 2>/dev/null
 #
 
-## vim: noexpandtab
+# vim: noexpandtab

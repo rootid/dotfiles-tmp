@@ -17,15 +17,23 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Rename terminal
 PS1="\u@mat \W\$ "
 
-
 # Sourcing aliases
-DOT_CONF_DIR=~/dotfiles
+DOT_CONF_DIR=~
 
 source $DOT_CONF_DIR/firefox/aliases.sh
-source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/ack/aliases.sh
 source $DOT_CONF_DIR/tmux/aliases.sh
 source $DOT_CONF_DIR/docker/aliases.sh
+source $DOT_CONF_DIR/bash/aliases.sh
+source $DOT_CONF_DIR/java/aliases.sh
+
+source $DOT_CONF_DIR/git/aliases.sh
+source $DOT_CONF_DIR/git/git-completion.bash
+
+#distractions
+
+#gcalcli
+#gtd
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
@@ -34,14 +42,12 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-#source ~/aliases.sh
-#source ~/git-completion.bash
 #source ~/network.sh
 #source ~/wunderline_helper.sh
 # For work remove
 #source ~/work.sh
 
-CUSTOM_BIN=$HOME/v2.config/bin
+CUSTOM_BIN=$HOME/dotfiles/bin
 export PATH=$CUSTOM_BIN:$PATH
 
 #source /usr/local/etc/bash_completion.d/password-store
@@ -63,5 +69,4 @@ export REVIEW_BASE=master
 
 source /usr/local/opt/autoenv/activate.sh
 
-#eval "$(rbenv init -)"
 # vim: ai ts=2 sw=2 et sts=2 ft=sh

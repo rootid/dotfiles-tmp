@@ -21,13 +21,6 @@ alias bma="$HOME/.rbenv/shims/boom add"
 ### }
 
 ##### JAVA {
-alias mci="mvn clean install"
-alias mdt="mvn dependency:tree"
-alias mda="mvn dependency:analyze"
-alias mdx="mvn -X dependency:tree -Dverbose"
-function mdi() {
-  mvn dependency:tree -Dverbose -Dincludes=$1
-}
 ### }
 
 

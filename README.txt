@@ -1,24 +1,27 @@
-
 # Install homebrew
-make install
+- make install
 
 # Install rest
-make update
+- make update
 
-# Install java tools 
+# Configure VIM
+- make update-vim
 
-# VIM 
-stow -n vim --verbose 3
-stow vim
-
-# Git
-cd config 
+# Update all default config
 - stow -n -vvv config -t ~/
 
-
-https://github.com/dghubble/dotfiles/tree/master/git-lyft
-
-# Fonts
-To add fonts
+# Add fonts
 - make add-fonts
 
+# Update all aliases
+- make tools
+
+# boom
+https://zachholman.com/boom/
+- gem install boom
+
+# Install java tools
+
+
+# Ref
+https://github.com/dghubble/dotfiles

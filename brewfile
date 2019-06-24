@@ -39,9 +39,12 @@ tap 'homebrew/bundle'
 #cask 'dbeaver-community'
 #cask 'docker'
 #cask 'virtualbox'
-cask 'meld'
+#cask 'meld'
+#cask 'keepassxc' #Lib issue
 
 ## Taskwarrior
 #brew 'task'
 #brew 'taskd'
 #brew 'tasks'
+#brew 'youtube-dl'
+brew 'bash-completion'
