@@ -25,3 +25,8 @@ https://zachholman.com/boom/
 
 # Ref
 https://github.com/dghubble/dotfiles
+
+# TODO
+* Fix tmp_vim
+* Move .vimrc to project dirs with execrc option
+* Clean vimrc
