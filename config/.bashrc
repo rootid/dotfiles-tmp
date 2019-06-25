@@ -48,7 +48,9 @@ fi;
 #source ~/work.sh
 
 CUSTOM_BIN=$HOME/dotfiles/bin
+CUSTOM_UTIL=$HOME/dotfiles/utils
 export PATH=$CUSTOM_BIN:$PATH
+export PATH=$CUSTOM_UTIL:$PATH
 
 #source /usr/local/etc/bash_completion.d/password-store
 

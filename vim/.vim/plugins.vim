@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 " colors
 
 " programming
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat' "Repeat
