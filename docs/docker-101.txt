@@ -1,4 +1,4 @@
--- mgmt
+-- management
   docker - start|stop|restart|kill|wait|pause
 
 -- constraint

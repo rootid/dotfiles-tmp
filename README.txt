@@ -30,3 +30,5 @@ https://github.com/dghubble/dotfiles
 * Fix tmp_vim
 * Move .vimrc to project dirs with execrc option
 * Clean vimrc
+* Move vim_snippet - Contains additional snippets
+* Move vim_spell - To add keywords from programming language
