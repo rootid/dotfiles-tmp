@@ -11,3 +11,16 @@ vim -u NONE -N
 http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
 for third party plugins vim-plug is used
 
+# TODO
+# Explore https://github.com/matze/vim-move (Move lines and selections up and down)
+
+# Test vim
+  - mkdir tmp && cd tmp && mkdir .vim-plug && touch .vimrc
+  - copy to .vimrc
+  " :PlugInstall
+  call plug#begin('.vim-plug')
+  Plug 'matze/vim-move'
+  call plug#end()
+  let g:move_key_modifier = 'C'
+
+
