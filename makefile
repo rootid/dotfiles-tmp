@@ -4,7 +4,6 @@ VIM_FILES = autoload colors ultisnips bundles testbundles addons
 
 DOT_FILES = ack bash editorconfig git ssh tmux vim wget
 
-#HOME_DIR = ${HOME}
 #CWD = ${PWD}
 
 .PHONY: install update add-fonts add-configs
@@ -30,8 +29,12 @@ tools:
 	@stow -t ~ tools --no-folding -vvv
 
 update-vim:
-	@echo "Updating vim"
+	@echo "Updating vim config"
 	@stow -t ~ vim --no-folding -vvv
+	mkdir -p $(HOME)/.vim-plug/plugged
+
+unlink-vim:
+	@stow -D vim 
 
 
 #all: clean vim_link dot_link

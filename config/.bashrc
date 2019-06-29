@@ -35,6 +35,9 @@ source $DOT_CONF_DIR/git/git-completion.bash
 #gcalcli
 #gtd
 
+# For work only
+source $DOT_CONF_DIR/work/pp-work.bash 
+
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
@@ -70,5 +73,6 @@ export REVIEW_BASE=master
 # REVIEW_BASE=master git review
 
 source /usr/local/opt/autoenv/activate.sh
+
 
 # vim: ai ts=2 sw=2 et sts=2 ft=sh

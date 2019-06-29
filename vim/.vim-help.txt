@@ -1,0 +1,13 @@
+
+# Blank vim no plugins
+vim -u NONE -N
+
+"vim -u rules.vim > opn w/ rls stngs
+
+# Generate help
+"vim -u NONE -c "helptags vim-obsession/doc" -c q
+
+# Vim directory structure (Used it for colors)
+http://learnvimscriptthehardway.stevelosh.com/chapters/42.html
+for third party plugins vim-plug is used
+
