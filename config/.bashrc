@@ -30,13 +30,18 @@ source $DOT_CONF_DIR/java/aliases.sh
 source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/git/git-completion.bash
 
-#distractions
+# distractions
 
-#gcalcli
-#gtd
+# gcalcli
+source $DOT_CONF_DIR/gcalcli/functions.bash
+
+# gtd
+
+# Video
+source $DOT_CONF_DIR/video-utils/functions.bash
 
 # For work only
-source $DOT_CONF_DIR/work/pp-work.bash 
+source $DOT_CONF_DIR/work/pp-work.bash
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
