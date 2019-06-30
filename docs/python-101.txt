@@ -3,21 +3,23 @@
 # To update the requirements.txt
 pip freeze > requirements.txt
 
-# To cleanup
-deactivate
+# How to start python project?
 
-# How to?
-cd your-project
+1. mkdir my-project
+2. cd my-project
+3. # Setup w/ python3
+  virtualenv --python python3 env
+  # OR
+  # Setup w/ python2
+  virtualenv --python python2 env
+4. # Activate python
+  source env/bin/activate
+  # OR
+  virtualenv env
+  . env/bin/activate
+5. Automate step 4
+  touch .env
+  echo "source env/bin/activate" >> .env
+6. # To exit python virtual env
+  deactivate
 
-# Setup w/ python3
-virtualenv --python python3 env
-
-# Setup w/ python2
-virtualenv --python python2 env
-
-# Activate python
-source env/bin/activate
-
-# Or
-virtualenv env
-. env/bin/activate
