@@ -41,6 +41,7 @@ tap 'homebrew/bundle'
 #cask 'virtualbox'
 #cask 'meld'
 #cask 'keepassxc' #Lib issue
+cask 'imagealpha'
 
 ## Taskwarrior
 #brew 'task'
@@ -51,3 +52,7 @@ tap 'homebrew/bundle'
 #brew 'handbrake'
 #brew 'imageoptim-cli'
 #brew 'par'
+# Must for image + PDF compression
+brew 'ImageMagick'
+
+

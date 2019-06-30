@@ -79,5 +79,4 @@ export REVIEW_BASE=master
 
 source /usr/local/opt/autoenv/activate.sh
 
-
 # vim: ai ts=2 sw=2 et sts=2 ft=sh
