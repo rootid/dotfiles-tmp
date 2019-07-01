@@ -1,0 +1,14 @@
+
+# Get vim tips
+@wikia vim tips
+
+# pipe to output file w/ no colors
+googler -C hello world | tee output
+
+# Use a custom color scheme, e.g., a warm color scheme designed for Solarized Dark (screenshot)
+TODO Eval
+http://manpages.ubuntu.com/manpages/bionic/man1/googler.1.html
+ googler --colors bjdxxy google
+ GOOGLER_COLORS=bjdxxy googler google
+
+

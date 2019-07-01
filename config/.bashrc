@@ -40,6 +40,10 @@ source $DOT_CONF_DIR/gcalcli/functions.bash
 # Video
 source $DOT_CONF_DIR/video-utils/functions.bash
 
+# Googler
+source $DOT_CONF_DIR/googler/googler-completion.bash
+source $DOT_CONF_DIR/googler/googler_at
+
 # For work only
 source $DOT_CONF_DIR/work/pp-work.bash
 
