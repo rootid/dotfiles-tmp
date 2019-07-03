@@ -55,3 +55,4 @@ tap 'homebrew/bundle'
 # Must for image + PDF compression
 #brew 'ImageMagick'
 #brew 'googler'
+#brew 'newsboat'
