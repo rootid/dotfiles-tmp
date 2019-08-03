@@ -73,7 +73,8 @@
 
     # custom mesage
     c = commit
-    cm = !git add -A && git commit -m
+    cm = commit --amend --date=now
+    #cm = !git add -A && git commit -m
 
     save = !git add -A && git commit -m "SAVEPOINT"
     wip = !git add -u && git commit -m "WIP"

@@ -26,6 +26,7 @@ source $DOT_CONF_DIR/tmux/aliases.sh
 source $DOT_CONF_DIR/docker/aliases.sh
 source $DOT_CONF_DIR/bash/aliases.sh
 source $DOT_CONF_DIR/java/aliases.sh
+source $DOT_CONF_DIR/java/functions.sh
 
 source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/git/git-completion.bash
