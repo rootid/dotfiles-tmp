@@ -1,0 +1,11 @@
+#!/bin/sh
+
+cwd_=${1%/}
+PERCENTAGE=60
+
+for file_ in $cwd_/*.jpg
+do
+  comp_file_=${file_%.*}
+  [ -f "$file_" ] && echo "$file_" && convert $file_ -quality $PERCENTAGE ${comp_file_}_red.jpg
+  echo converted to $comp_file_
+done

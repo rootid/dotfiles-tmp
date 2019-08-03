@@ -22,7 +22,6 @@ https://zachholman.com/boom/
 
 # Install java tools
 
-
 # Ref
 https://github.com/dghubble/dotfiles
 
