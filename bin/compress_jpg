@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Compress the images upto PERCENTAGE
+# compress_jpg <dir_path_with_jpg_images>
+# compress_jpg ~/Desktop/
 cwd_=${1%/}
 PERCENTAGE=60
 
