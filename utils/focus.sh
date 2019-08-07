@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dns_file=$HOME/v2.config/config/focus_dns.lst
+dns_file=$HOME/.block-dns
 
 while read line
 do

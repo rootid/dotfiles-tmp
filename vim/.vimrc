@@ -337,7 +337,6 @@ set foldmarker={,}
 " }
 "
 
-
 " Formatting {
 
 " code review with blind eye for vertical distance
