@@ -33,10 +33,13 @@ source $DOT_CONF_DIR/git/git-completion.bash
 
 # distractions
 
+## gtd tools
+
 # gcalcli
 source $DOT_CONF_DIR/gcalcli/functions.bash
 
-# gtd
+# Watson
+source $DOT_CONF_DIR/watson/functions.bash
 
 # Video
 source $DOT_CONF_DIR/video-utils/functions.bash

@@ -1,7 +1,7 @@
 # Install homebrew
 - make install
 
-# Install rest
+# Install apps/cli tools using homebrew
 - make update
 
 # Configure VIM
@@ -31,3 +31,5 @@ https://github.com/dghubble/dotfiles
 * Clean vimrc
 * Move vim_snippet - Contains additional snippets
 * Move vim_spell - To add keywords from programming language
+
+#

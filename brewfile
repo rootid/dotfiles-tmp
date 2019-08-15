@@ -61,3 +61,5 @@ tap 'homebrew/bundle'
 #brew 'rename'
 #
 #syncthing - To sync the data
+
+brew 'watson'

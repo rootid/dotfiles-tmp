@@ -5,7 +5,7 @@ install:
 	homebrew/install.sh
 
 update:
-	@echo "Adding required applications"
+	@echo "Adding apps using brewfile"
 	brew bundle
 
 add-fonts:
