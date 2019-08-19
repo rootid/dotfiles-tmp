@@ -62,4 +62,5 @@ tap 'homebrew/bundle'
 #
 #syncthing - To sync the data
 
-brew 'watson'
+#brew 'watson'
+brew 'buku'

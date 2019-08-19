@@ -27,9 +27,11 @@ source $DOT_CONF_DIR/docker/aliases.sh
 source $DOT_CONF_DIR/bash/aliases.sh
 source $DOT_CONF_DIR/java/aliases.sh
 source $DOT_CONF_DIR/java/functions.sh
-
 source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/git/git-completion.bash
+
+source $DOT_CONF_DIR/buku/aliases.bash
+source $DOT_CONF_DIR/buku/functions.bash
 
 # distractions
 
@@ -51,6 +53,9 @@ source $DOT_CONF_DIR/googler/googler_at
 # For work only
 source $DOT_CONF_DIR/work/pp-work.bash
 
+# GO
+export GOPATH=$HOME/go
+
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
@@ -58,10 +63,6 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-#source ~/network.sh
-#source ~/wunderline_helper.sh
-# For work remove
-#source ~/work.sh
 
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/utils
