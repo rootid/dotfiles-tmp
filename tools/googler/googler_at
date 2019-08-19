@@ -211,6 +211,8 @@
 
 # MIT OpenCourseWare
   alias @ocw='googler -w ocw.mit.edu'
+# d
+  alias @d='googler -w merriam-webster.com'
 # Open Embedded
   alias @oembedded='googler -w openembedded.org'
 # OMG! Ubuntu!
@@ -314,7 +316,6 @@
     # W
 
 # Wikipedia
-  alias @w='googler -w en.wikipedia.org'
 # Walmart
   alias @walmart='googler -w walmart.com'
 # Weather.com
