@@ -1,0 +1,2 @@
+
+alias dict="wkdict"

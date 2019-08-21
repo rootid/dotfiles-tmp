@@ -16,7 +16,12 @@ function go_bk_add() {
 }
 
 # Add todo
-function go_bk_add() {
+function go_bk_todo() {
   buku -a $1 $2  --title todo
+}
+
+# Delete bookmark
+function go_bk_del() {
+  buku --delete $1
 }
 

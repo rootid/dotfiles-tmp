@@ -1,0 +1,3 @@
+tools/gcalcli/functions.bash filter=git-crypt diff=git-crypt
+config/.gcalclirc filter=git-crypt diff=git-crypt
+tools/work/pp-work.bash filter=git-crypt diff=git-crypt
