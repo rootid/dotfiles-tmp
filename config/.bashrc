@@ -21,15 +21,22 @@ PS1="\u@mat \W\$ "
 DOT_CONF_DIR=~
 
 source $DOT_CONF_DIR/firefox/aliases.sh
+
 source $DOT_CONF_DIR/ack/aliases.sh
+
 source $DOT_CONF_DIR/tmux/aliases.sh
+
 source $DOT_CONF_DIR/docker/aliases.sh
+
 source $DOT_CONF_DIR/bash/aliases.sh
+
 source $DOT_CONF_DIR/java/aliases.sh
 source $DOT_CONF_DIR/java/functions.sh
+
 source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/git/git-completion.bash
 
+# Bookmark tool
 source $DOT_CONF_DIR/buku/aliases.bash
 source $DOT_CONF_DIR/buku/functions.bash
 
@@ -53,6 +60,12 @@ source $DOT_CONF_DIR/googler/googler_at
 # For work only
 source $DOT_CONF_DIR/work/pp-work.bash
 
+# Wiki dictionary
+source $DOT_CONF_DIR/wkdict/aliases.bash
+
+# GPG
+source $DOT_CONF_DIR/gpg/functions.bash
+
 # GO
 export GOPATH=$HOME/go
 
@@ -62,7 +75,6 @@ if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
-
 
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/utils
