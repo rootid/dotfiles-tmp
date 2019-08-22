@@ -4,8 +4,13 @@ function go_bk_list() {
   buku --colors oaaxm -p
 }
 
+# Find by tag
+function go_bk_find() {
+  buku -S $1 --colors oaaxm
+}
+
 # List all the tags
-function go_bk_tag() {
+function go_bk_list_tags() {
   buku --stag
 }
 

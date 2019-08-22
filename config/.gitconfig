@@ -78,6 +78,8 @@
 
     save = !git add -A && git commit -m "SAVEPOINT"
     wip = !git add -u && git commit -m "WIP"
+    arc = commit -m \"Addressed review comments\"
+    arm = commit --amend --date=now -m \"Addressed review comments\"
     undo = reset HEAD~1 --mixed
 
     st = status -s
@@ -149,6 +151,14 @@
   # instead of opening all files:
   # git reviewone foo.js bar.js
   reviewone = !vim -p +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+
+  # git-crypt {
+  # Usage - git gca rootid
+    gca = "!f() { git-crypt add-gpg-user $1; }; f"
+    gci = "!f() { git-crypt init; }; f"
+    gcs = "!f() { git-crypt status | grep -v ^not; }; f"
+    gcl = "!f() { git-crypt lock; }; f"
+  # }
 
 [gitflow "prefix"]
   feature = feature-
