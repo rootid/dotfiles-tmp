@@ -22,7 +22,7 @@ hi Search cterm=NONE ctermfg=DarkMagenta ctermbg=white "set hlt color for fg and
 let mapleader = ","
 
 " Do not cross the line
-set colorcolumn=200
+set colorcolumn=150
 
 " }
 

@@ -4,6 +4,21 @@
 #
 # To request key addition or removal upstream, please drop an email.
 
+# Cached
+  alias g_bael='googler -w www.baeldung.com'
+# Stack Overflow
+  alias g_stack='googler -w stackoverflow.com'
+# highscalability
+  alias g_hs='googler -w highscalability.com'
+# merriam
+  alias g_mw='googler -w merriam-webster.com'
+# Hacker News
+  alias g_hn='googler -w news.ycombinator.com'
+# grammar
+  alias g_gmr='googler -w quickanddirtytips.com'
+
+
+
     # A
 
 # Amazon.com

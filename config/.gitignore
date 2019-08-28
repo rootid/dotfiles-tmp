@@ -11,4 +11,5 @@ myvim.rc
 # For local dev
 fix.out
 deploy.out
-*.editorconfig
+*.out
+*.log
