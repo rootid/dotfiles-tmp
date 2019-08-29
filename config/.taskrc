@@ -48,7 +48,18 @@ uda.priority.values = H,M,,L
 urgency.uda.priority.L.coefficient=0
 urgency.uda.priority..coefficient=1.8
 
-#color=on
+# Get daily status
+alias.dailystatus=status:completed end.after:today all
+
+# Set daily burndown as default
+alias.burndown=burndown.daily
+alias.burndown_monthly=burndown.monthly
+
+# Indicate the active task in reports
+active.indicator=>
+
+#
+#color=off
 
 ## default.due=tom
 #default.priority=M
@@ -59,8 +70,18 @@ urgency.uda.priority..coefficient=1.8
 #calendar.holidays=full
 #
 #report.list.description=Lists all tasks matching the specified criteria
-report.list.columns=id,project,priority,due.relative,due,depends,recur,urgency,tags,description
-report.list.labels=ID,Project,Pri,Rel,Due,Depends,Recur,Score,Tags,Description & Annotation
+
+#report.list.columns=id,project,priority,due.relative,due,depends,recur,urgency,tags,description
+#report.list.labels=ID,Project,Pri,Rel,Due,Depends,Recur,Score,Tags,Description & Annotation
+
+# Report config
+default.command=ready
+report.ready.columns=id,start.active,depends.indicator,project,due.relative,description.desc
+report.ready.labels= ,,Depends, Project, Due, Description
+
+# Make searches case insensitive, personal preference
+search.case.sensitive=no
+
 #report.list.sort=urgency-
 ## report.list.sort=due+,priority-,project+
 #report.list.filter=status:pending
