@@ -1,0 +1,62 @@
+/$ task 3 schedule:+3d
+$ task 7 schedule:tomorrow
+$ task 1 schedule:today
+$ alias today="task '( \\
+PS1="... \$(task_indicator) ..."
+$Color_Off${debian_chroot:+($debian_chroot)}\w$BYellow\$(__git_ps1)\$(task_indicator) $Color_Off"
+$ task add Send Dad birthday card \\
+$ task waiting
+$ task 42 modify wait:tomorrow
+$ task 42 modify wait:+5d
+$ task add Send Dad birthday card \\
+$ task add Send Dad birthday card \\
+$ task add Send Dad birthday card \\
+$ task add Book flights       \\
+$ task 31 annotate "Don't forget to discuss annotations"
+$ task
+$ task 31
+$ task 31 done <b>Talk completed</b>
+$ task 23 delete <b>Project cancelled</b>
+$ task add Buy mini-screwdriver set \\
+$ task add Ping client on invoice payment \\
+$ task +LATEST modify -cyberdyne +shinra
+$ task +phone
+$ task +YEAR
+$ task +QUARTER
+$ task +MONTH
+$ task +WEEK
+$ task +TOMORROW
+$ task +TODAY
+$ task +OVERDUE
+$ task -SCHEDULED
+$ task -PROJECT
+$ task -UNTIL
+$ task /Mordor transport/ done
+$ task projects
+$ task project:travel
+$ task project:travel.mordor
+$ task context define work      \\
+$ task context define cyberdyne \\
+$ task context define personal  \\
+$ task context define fun       \\
+$ task context cyberdyne
+$ task context personal
+$ task context fun
+$ task context list
+$ task context show
+$ task context none
+$ task add Track tooth-flossing on Beeminder
+$ task 12 annotate https://beeminder.com/
+$ taskopen 12
+$ task add Finish report
+$ task 13 annotate ~/report.xlsx
+$ taskopen 13
+$ task annotate 42 Notes
+$ taskopen 42
+$ task 31 done Presented talk at ConFoo
+$ task 23 delete No longer relevant
+$ task
+$ task 31
+$ task 42 modify pri:H
+$ task add Buy pumpkin
+$ task add Make pumpkin soup

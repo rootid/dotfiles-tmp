@@ -11,9 +11,6 @@
 
 # Use the command 'task show' to see all defaults and overrides
 
-# Files
-data.location=~/.config/task
-
 # Color theme
 #include /usr/local/share/doc/task/rc/dark-blue-256.theme
 #include /usr/local/share/doc/task/rc/light-256.theme
@@ -60,7 +57,7 @@ active.indicator=>
 
 #
 #color=off
-
+regex=on
 ## default.due=tom
 #default.priority=M
 #recurrence.limit=1
@@ -112,3 +109,10 @@ search.case.sensitive=no
 ## urgency.user.project.<project>.coefficient=5.0  # specific project
 ## urgency.user.tag.<tag>.coefficient=5.0          # specific tag
 ## urgency.uda.<name>.coefficient=5.0              # specific UDA
+context.do=+do
+context.delegate=+delegate
+context.decide=+decide
+context.delete=+delete
+context.none=+none
+context.next=+next
+context.company=+company
