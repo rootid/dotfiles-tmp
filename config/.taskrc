@@ -9,23 +9,46 @@
 #   variable=      -- By specifying no value, this means no default
 #   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
 
-
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
 data.location=~/.config/task
 
-
 # Color theme
 #include /usr/local/share/doc/task/rc/dark-blue-256.theme
-include /usr/local/share/doc/task/rc/light-256.theme
+#include /usr/local/share/doc/task/rc/light-256.theme
 #include /usr/local/share/doc/task/rc/holidays.fr-FR.rc
-#
+#include /usr/local/share/doc/task/rc/light-16.theme
+#include /usr/local/share/doc/task/rc/light-256.theme
+#include /usr/local/share/doc/task/rc/dark-16.theme
+#include /usr/local/share/doc/task/rc/dark-red-256.theme
+#include /usr/local/share/doc/task/rc/dark-green-256.theme
+#include /usr/local/share/doc/task/rc/dark-blue-256.theme
+#include /usr/local/share/doc/task/rc/dark-violets-256.theme
+#include /usr/local/share/doc/task/rc/dark-yellow-green.theme
+#include /usr/local/share/doc/task/rc/dark-gray-256.theme
+#include /usr/local/share/doc/task/rc/dark-gray-blue-256.theme
+#include /usr/local/share/doc/task/rc/solarized-dark-256.theme
+include /usr/local/share/doc/task/rc/solarized-light-256.theme
+#include /usr/local/share/doc/task/rc/no-color.theme
 
 # Files
-data.location=~/task-war/
+data.location=~/task-war-data
 
-color=on
+# Follows Fibo numbers
+urgency.user.project.fun.coefficient = 1.0
+urgency.user.project.non_productive.coefficient = 1.0
+urgency.user.project.company_work.coefficient = 2.0
+urgency.user.project.start_up.coefficient = 3.0
+
+# Priority levels
+uda.priority.values = H,M,,L
+
+# Swap none and low priority levels
+urgency.uda.priority.L.coefficient=0
+urgency.uda.priority..coefficient=1.8
+
+#color=on
 
 ## default.due=tom
 #default.priority=M
@@ -36,8 +59,8 @@ color=on
 #calendar.holidays=full
 #
 #report.list.description=Lists all tasks matching the specified criteria
-#report.list.columns=id,project,priority,due.relative,due,depends,recur,urgency,tags,description
-#report.list.labels=ID,Project,Pri,Rel,Due,Depends,Recur,Score,Tags,Description & Annotation
+report.list.columns=id,project,priority,due.relative,due,depends,recur,urgency,tags,description
+report.list.labels=ID,Project,Pri,Rel,Due,Depends,Recur,Score,Tags,Description & Annotation
 #report.list.sort=urgency-
 ## report.list.sort=due+,priority-,project+
 #report.list.filter=status:pending

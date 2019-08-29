@@ -47,8 +47,13 @@ source $DOT_CONF_DIR/buku/functions.bash
 # gcalcli
 source $DOT_CONF_DIR/gcalcli/functions.bash
 
+# Taskwarrior
+source $DOT_CONF_DIR/task-war/functions.bash
+source $DOT_CONF_DIR/task-war/aliases.bash
+
 # Watson
 source $DOT_CONF_DIR/watson/functions.bash
+
 
 # Video
 source $DOT_CONF_DIR/video-utils/functions.bash
