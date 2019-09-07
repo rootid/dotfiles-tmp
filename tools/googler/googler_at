@@ -17,6 +17,8 @@
 # grammar
   alias g_gmr='googler -w quickanddirtytips.com'
 
+  alias g_wiki='googler -w en.wikipedia.org'
+
 
 
     # A
