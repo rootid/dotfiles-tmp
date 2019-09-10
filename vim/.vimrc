@@ -105,6 +105,9 @@ set spellfile=$HOME/v2.config/vim_spell/.vim-spell-en.utf-8.add
 " clear change
 map ,cc :colorscheme mac_classic<CR>
 
+" Create the file if not exists
+map <leader>gf :e <cfile><cr>
+
 " }
 
 " Section: external utilities {
@@ -188,7 +191,8 @@ call plug#end()
     set rnu!
   endfunction
 
-  nnoremap <silent><C-N> :call g:TglRelNmMode()<cr>
+  " Toggle relative line number
+  nnoremap ,trl :call g:TglRelNmMode()<cr>
 
   " Smart search
   function! g:SrchSmart()

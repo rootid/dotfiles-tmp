@@ -17,9 +17,24 @@
 # grammar
   alias g_gmr='googler -w quickanddirtytips.com'
 
+# search on wiki
   alias g_wiki='googler -w en.wikipedia.org'
 
+# search on youtube
+  alias g_yt='googler -w youtube.com'
 
+# search on github
+  alias g_ghub='googler -w github.com'
+
+  alias g_lt='googler -w leetcode.com'
+
+  alias g_vim='googler -w vim.org'
+
+  alias g_vim_fan='googler -w vim.fandom.com'
+
+  alias g_oracle='googler -w docs.oracle.com'
+
+  alias g_khan='googler -w khanacademy.org'
 
     # A
 
@@ -133,7 +148,6 @@
   alias @gpg='googler -w gnupg.org'
 # Project Gutenberg
   alias @gutenberg='googler -w gutenberg.org'
-
 
     # H
 

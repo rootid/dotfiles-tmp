@@ -6,4 +6,4 @@
 #   https://rg3.github.io/youtube-dl/
 #
 
-cd ~/gen-next/vagrant/shared/todo-video && youtube-dl "$1"
+cd ~/gen-next/vagrant/shared/todo-video && PYTHONHTTPSVERIFY=0 youtube-dl "$1"
