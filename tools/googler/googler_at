@@ -1,13 +1,7 @@
-# googler @t alias list
-# Author: Arun Prakash Jana
-# email: engineerarun@gmail.com
-#
-# To request key addition or removal upstream, please drop an email.
-
 # Cached
   alias g_bael='googler -w www.baeldung.com'
 # Stack Overflow
-  alias g_stack='googler -w stackoverflow.com'
+  alias g_so='googler -w stackoverflow.com'
 # highscalability
   alias g_hs='googler -w highscalability.com'
 # merriam
@@ -33,8 +27,13 @@
   alias g_vim_fan='googler -w vim.fandom.com'
 
   alias g_oracle='googler -w docs.oracle.com'
-
   alias g_khan='googler -w khanacademy.org'
+
+  alias g_stack_english='googler -w english.stackexchange.com'
+
+  alias g_stack_ex='googler -w stackexchange.com'
+
+  alias g_spring='googler -w docs.spring.io'
 
     # A
 

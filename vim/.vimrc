@@ -152,6 +152,10 @@ Plug 'morhetz/gruvbox'
 
 " Plug 'honza/vim-snippets'
 " Plug 'SirVer/ultisnips'  "vim-snippets must install to ultisnips work
+
+" If installed using Homebrew
+Plug '/usr/local/opt/fzf'
+
 call plug#end()
 " }
 
@@ -308,7 +312,7 @@ call plug#end()
 
 " }
 
-" Section:  {
+" Section: Formatter {
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
@@ -332,16 +336,6 @@ command Tjs set ft=json | execute "%!json_reformat"
 
 " Keep single blank
 command -range=% KSB :<line1>,<line2>s/\n\{3,}/\r\r/e
-" }
-
-" Section: flds {
-autocmd BufRead *.vim,.*vimrc set foldenable foldmethod=marker foldlevel=0
-set foldmethod=syntax
-set foldmarker={,}
-" }
-"
-
-" Formatting {
 
 " code review with blind eye for vertical distance
 "%s/\w/X/g
@@ -354,22 +348,32 @@ autocmd FileType c,cpp,java,go,javascript,python,rst,ruby,rust,yml,perl autocmd 
 
 autocmd FileType haskell,python,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 
-autocmd FileType java source $HOME/.vim/vim.addons/jcommenter.vim
-source $HOME/.vim/vim.addons/newline_after_given_patterns.vim
+" }
 
-set splitright           " Puts new vsplit windows to the right of the current
-set splitbelow           " Puts new split windows to the bottom of the current
-set matchpairs+=<:>,`:'  " Match, to be used with %
+" Section: Folds {
+autocmd BufRead *.vim,.*vimrc set foldenable foldmethod=marker foldlevel=0
+set foldmethod=syntax
+set foldmarker={,}
+
+" XML folding
+let g:xml_syntax_folding=1
 
 " }
 
-" vim command auto completion {
+" Section: Multi Vim Window Settings {
+set splitright           " Puts new vsplit windows to the right of the current
+set splitbelow           " Puts new split windows to the bottom of the current
+set matchpairs+=<:>,`:'  " Match, to be used with %
+" }
+
+" Section: vim command auto completion {
 " https://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
 set wildmenu
 set wildmode=longest:list,full
 " set wildmenu=list:full
 "}
-" netrw config {
+
+" Section: netrw config {
 
 let g:netrw_banner = 0 "Remove top banner
 let g:netrw_liststyle = 3 "tree view
@@ -380,12 +384,10 @@ let g:netrw_altv = 1
 " let g:netrw_browse_split = 4
 
 "}
-"
+
 if has('python3')
   silent! python3 1
 endif
 
-" folding
-let g:xml_syntax_folding=1
 
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:
