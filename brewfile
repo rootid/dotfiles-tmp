@@ -74,3 +74,5 @@ brew 'taskd'
 brew 'tasksh'
 brew 'timewarrior'
 #brew 'fzf'
+
+brew 'bash-completion'

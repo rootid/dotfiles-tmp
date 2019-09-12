@@ -12,9 +12,13 @@ add-fonts:
 	@echo "Adding font"
 	fonts/install.sh
 
-add-configs:
+add-config:
 	@echo "Adding/updating config"
 	@stow -t ~ config -vvv
+
+update-ssh-config:
+	@echo "Adding/updating ssh config"
+	@stow -t ~ ssh -vvv
 
 tools:
 	@echo "Updating tools shortcuts"
@@ -32,4 +36,5 @@ update-vim:
 unlink-vim:
 	@stow -D vim
 
+# stow test the changes first eg. stow -n -t ~ ssh -vvv
 # vim: noexpandtab

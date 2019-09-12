@@ -36,6 +36,8 @@ source $DOT_CONF_DIR/java/functions.sh
 source $DOT_CONF_DIR/git/aliases.sh
 source $DOT_CONF_DIR/git/git-completion.bash
 
+source $DOT_CONF_DIR/ssh/functions.bash
+
 # Bookmark tool
 source $DOT_CONF_DIR/buku/aliases.bash
 source $DOT_CONF_DIR/buku/functions.bash
