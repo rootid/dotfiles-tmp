@@ -156,6 +156,9 @@ Plug 'morhetz/gruvbox'
 " If installed using Homebrew
 Plug '/usr/local/opt/fzf'
 
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
+
 call plug#end()
 " }
 
@@ -385,9 +388,23 @@ let g:netrw_altv = 1
 
 "}
 
+" Section: Wiki {
+
+" Configure wiki to use the md
+let g:vimwiki_list = [{'path': '~/wiki/',
+                      \ 'syntax': 'markdown',
+                      \ 'ext': '.md'}]
+
+let g:vimwiki_listsyms = 'x.oO✓'
+
+" Toggle the tasks only after creating the tasks and then gln/glp to update
+" the status
+map <Leader>tx <Plug>VimwikiToggleRejectedListItem
+
+"}
+
 if has('python3')
   silent! python3 1
 endif
-
 
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:

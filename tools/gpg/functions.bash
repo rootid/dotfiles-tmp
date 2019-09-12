@@ -6,7 +6,7 @@ function go_list_gpg_keys() {
 }
 
 # Create the key
-function go_list_gpg_keys() {
+function go_create_gpg_keys() {
   gpg --gen-key
 }
 
