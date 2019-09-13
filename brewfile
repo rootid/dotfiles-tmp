@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+brew 'fzf'
 brew 'ssh-copy-id'
 brew 'ack'
 brew 'coreutils'
@@ -73,6 +74,5 @@ brew 'task'
 brew 'taskd'
 brew 'tasksh'
 brew 'timewarrior'
-#brew 'fzf'
 
 brew 'bash-completion'
