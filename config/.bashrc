@@ -76,6 +76,13 @@ source $DOT_CONF_DIR/gpg/functions.bash
 # GO
 export GOPATH=$HOME/go
 
+# FZF settings
+# https://github.com/junegunn/fzf#respecting-gitignore
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# https://github.com/junegunn/fzf#layout
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";

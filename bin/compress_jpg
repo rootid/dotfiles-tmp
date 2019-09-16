@@ -2,7 +2,9 @@
 
 # Compress the images upto PERCENTAGE
 # compress_jpg <dir_path_with_jpg_images>
-# compress_jpg ~/Desktop/
+# compress_jpg ~/Desktop/A
+# From current working directory
+# compress_jpg $PWD
 cwd_=${1%/}
 PERCENTAGE=60
 

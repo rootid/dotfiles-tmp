@@ -1,4 +1,4 @@
-" Section: basic {
+" Section: basic
 
 " Enable project specific vimrc
 " Used to try out different plugins
@@ -24,35 +24,35 @@ let mapleader = ","
 " Do not cross the line
 set colorcolumn=150
 
-" }
+"
 
-" Section: status line {
+" Section: status line
 
-  " Section: ruler {
+  " Section: ruler
     if has('cmdline_info')
         set ruler                   " Show the ruler
         set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
         set showcmd                 " Show partial commands in status line and
                                     " Selected characters/lines in visual mode
     endif
-  " }
+  "
 
-  " Section: status {
+  " Section: status
   if has('statusline')
       set laststatus=2
 
       " Broken down into easily includeable segments
       set statusline=%<%f\                     " Filename
       set statusline+=%w%h%m%r                 " Options
-      set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''} " Git Hotness
-      set statusline+=\ [%{&ff}/%Y]            " Filetype
-      set statusline+=\ [%{getcwd()}]          " Current dir
+      "set statusline+=%exists('g:loaded_fugitive')?fugitive#statusline():'' " Git Hotness
+      set statusline+=\ [%&ff/%Y]            " Filetype
+      set statusline+=\ [%getcwd()]          " Current dir
       set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   endif
-  " }
-" }
+  "
+"
 
-" Section: colors  {
+" Section: colors
 " colorscheme murphy "For vimdiff
 if &diff
   colorscheme evening
@@ -72,18 +72,18 @@ set background=light
 " let g:molokai_italic=0
 " colorscheme molokai
 
-" }
+"
 
 set mouse=r
 
-" Section: auto ops buffers {
+" Section: auto ops buffers
 set autoread
 set autowriteall
 autocmd FocusLost * silent! wall
 
-"}
 
-" Section: basic mapping {
+
+" Section: basic mapping
 imap jk <Esc>
 
 " Remove empty lines
@@ -108,24 +108,24 @@ map ,cc :colorscheme mac_classic<CR>
 " Create the file if not exists
 map <leader>gf :e <cfile><cr>
 
-" }
+"
 
-" Section: external utilities {
+" Section: external utilities
 
 " Ack/ag
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" }
+"
 
-" Section: undo settings {
+" Section: undo settings
 " set undodir=~/.vim/undodir
 " set undofile   " Maintain undo history between sessions
 
-" }
+"
 
-" Section: Plugins {
+" Section: Plugins
 " Prereq : mkdir -p ~/.vim-plug/plugged
 " :source %
 " Run as :PlugInstall
@@ -146,6 +146,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'godlygeek/tabular'
 "Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
+Plug 'pbogut/fzf-mru.vim'
 " Plug 'inkarkat/vim-SpellCheck'
 " Plug 'b4b4r07/vim-sqlfmt'
 " Plug 'mattn/vim-sqlfmt'
@@ -155,14 +156,15 @@ Plug 'morhetz/gruvbox'
 
 " If installed using Homebrew
 Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 
 call plug#end()
-" }
+"
 
-" Section: plugin config {
+" Section: plugin config
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -172,7 +174,7 @@ call plug#end()
 " let g:UltiSnipsSnippetsDir = "~/.vim-plug/plugged/vim-snippets/UltiSnips"
 " let g:UltiSnipsSnippetDirectories=['UltiSnips']
 
- " Fugitive shortcuts {
+ " Fugitive shortcuts
  if isdirectory(expand("~/.vim-plug/plugged/vim-fugitive/"))
    set diffopt+=vertical
    nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -188,10 +190,10 @@ call plug#end()
    nnoremap <silent> <leader>gi :Git add -p %<CR>
    nnoremap <silent> <leader>gg :SignifyToggle<CR>
  endif
- "}
-" }
 
-" Functions {
+"
+
+" Functions
 
   " Use ctrl+l to switch btn reln and noreln
   function! g:TglRelNmMode()
@@ -209,7 +211,7 @@ call plug#end()
 
   nnoremap ,f :call g:SrchSmart()<cr>
 
-  " Strip whitespace {
+  " Strip whitespace
   function! StripTrailingWhitespace()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -221,9 +223,9 @@ call plug#end()
     let @/=_s
     call cursor(l, c)
   endfunction
-  " }
+  "
 
-  " set zj and zk go to find open folds {
+  " set zj and zk go to find open folds
   function! GoToOpenFold(direction)
     if (a:direction == "next")
       normal zj
@@ -240,11 +242,11 @@ call plug#end()
     endif
     call cursor(start, 0)
   endfunction
-  " }
+  "
 
-  " Session {
+  " Session
 
-     " Creates a session {
+     " Creates a session
       function! MakeSession()
         let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
         if (filewritable(b:sessiondir) != 2)
@@ -254,9 +256,9 @@ call plug#end()
         let b:filename = b:sessiondir . '/session.vim'
         exe "mksession! " . b:filename
       endfunction
-      " }
+      "
 
-      " Updates a session, BUT ONLY IF IT ALREADY EXISTS {
+      " Updates a session, BUT ONLY IF IT ALREADY EXISTS
       function! UpdateSession()
         let b:sessiondir = $HOME . "/.vim_session" . getcwd()
         let b:sessionfile = b:sessiondir . "session.vim"
@@ -264,9 +266,9 @@ call plug#end()
           exe "mksession! " . b:filename
         endif
       endfunction
-      " }
+      "
 
-      " Loads a session if it exists {
+      " Loads a session if it exists
       function! LoadSession()
         let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
         let b:sessionfile = b:sessiondir . "/session.vim"
@@ -276,9 +278,9 @@ call plug#end()
           echo "No session loaded."
         endif
       endfunction
-      " }
+      "
 
-      " Mapping session {
+      " Mapping session
       "au VimEnter * nested :call LoadSession()
       "Forceful update session automatic
       au VimLeave * :call UpdateSession()
@@ -286,11 +288,11 @@ call plug#end()
       map ,u :call UpdateSession()<CR>
       map ,l :call LoadSession()<CR>
       map ,m :call MakeSession()<CR>
-      " }
+      "
 
-  " }
+  "
 
-  " Marker {
+  " Marker
     " Marker generate for the text files
     function! PrependMarker(lvl)
       let l:marker= "--"
@@ -311,11 +313,11 @@ call plug#end()
     nnoremap <silent> ,pmr2 :call PrependMarker(2)<CR>
     nnoremap <silent> ,pmr3 :call PrependMarker(3)<CR>
     nnoremap <silent> ,pmr4 :call PrependMarker(4)<CR>
-  " }
+  "
 
-" }
+"
 
-" Section: Formatter {
+" Section: Formatter
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
@@ -338,13 +340,13 @@ command Txml set ft=xml | execute "%!xmllint --format --recover - 2>/dev/null"
 command Tjs set ft=json | execute "%!json_reformat"
 
 " Keep single blank
-command -range=% KSB :<line1>,<line2>s/\n\{3,}/\r\r/e
+command -range=% KSB :<line1>,<line2>s/\n\,/\r\r/e
 
 " code review with blind eye for vertical distance
 "%s/\w/X/g
 
 " Fast formatting pretty print line > 100
-nmap ,f1 :g/.\{100,\}/ .!par w100<CR>
+nmap ,f1 :g/.\00,\}/ .!par w100<CR>
 
 " Invoke StripTrailingWhitespace for all below files types
 autocmd FileType c,cpp,java,go,javascript,python,rst,ruby,rust,yml,perl autocmd BufWritePre <buffer> call StripTrailingWhitespace()
@@ -403,8 +405,85 @@ map <Leader>tx <Plug>VimwikiToggleRejectedListItem
 
 "}
 
+" Section: fuzzy finder {
+
+nnoremap <C-p> :Files<CR>
+nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
+
+" Custom mapping
+nnoremap <silent> <Leader>bfs :Files ~/bfs<CR>
+nnoremap <silent> <Leader>spec :Files ~/spec<CR>
+nnoremap <silent> <Leader>test :Files app/views<CR>
+
+" Most recently used files
+nnoremap <silent> <Leader>m :FZFMru<CR>
+
+" List buffers
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+" Open files in vertical horizontal split
+nnoremap <silent> <Leader>v :call fzf#run({
+\   'right': winwidth('.') / 2,
+\   'sink':  'vertical botright split' })<CR>
+
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader><Enter> :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
+
+
+
+"}
+
+" Section: Navigation {
+map <Leader>1 :tabn 1<CR>
+map <Leader>2 :tabn 2<CR>
+map <Leader>3 :tabn 3<CR>
+map <Leader>4 :tabn 4<CR>
+map <Leader>5 :tabn 5<CR>
+map <Leader>6 :tabn 6<CR>
+map <Leader>7 :tabn 7<CR>
+map <Leader>8 :tabn 8<CR>
+map <Leader>9 :tabn 9<CR>
+map <Leader>0 :tab split<CR>
+"}
+
+" Section: ag {
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  "let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  "let g:ctrlp_use_caching = 0
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+"}
+
+" Section: Empty template {
+"}
+
 if has('python3')
   silent! python3 1
 endif
 
-" vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" vim: set et tw=79 foldmarker={, foldlevel=0 foldmethod=marker spell:
