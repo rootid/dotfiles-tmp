@@ -44,9 +44,9 @@ set colorcolumn=150
       " Broken down into easily includeable segments
       set statusline=%<%f\                     " Filename
       set statusline+=%w%h%m%r                 " Options
-      "set statusline+=%exists('g:loaded_fugitive')?fugitive#statusline():'' " Git Hotness
-      set statusline+=\ [%&ff/%Y]            " Filetype
-      set statusline+=\ [%getcwd()]          " Current dir
+      set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''} " Git Hotness
+      set statusline+=\ [%{&ff}/%Y]            " Filetype
+      set statusline+=\ [%{getcwd()}]          " Current dir
       set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   endif
   "
@@ -346,7 +346,7 @@ command -range=% KSB :<line1>,<line2>s/\n\,/\r\r/e
 "%s/\w/X/g
 
 " Fast formatting pretty print line > 100
-nmap ,f1 :g/.\00,\}/ .!par w100<CR>
+nmap ,f1 :g/.\{100,\}/ .!par w100<CR>
 
 " Invoke StripTrailingWhitespace for all below files types
 autocmd FileType c,cpp,java,go,javascript,python,rst,ruby,rust,yml,perl autocmd BufWritePre <buffer> call StripTrailingWhitespace()
@@ -475,7 +475,7 @@ if executable('ag')
 endif
 
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+"nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "}
 
@@ -486,4 +486,4 @@ if has('python3')
   silent! python3 1
 endif
 
-" vim: set et tw=79 foldmarker={, foldlevel=0 foldmethod=marker spell:
+" vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:

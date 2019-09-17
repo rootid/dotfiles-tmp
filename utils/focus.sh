@@ -18,6 +18,9 @@ then
   exit 1
 fi
 
+# cleanup and then shut down
+sudo sed -i -e "/0.0.0.0/d" /etc/hosts
+
 while read line
 do
  echo $line | sudo tee -a /etc/hosts
