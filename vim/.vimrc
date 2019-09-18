@@ -1,4 +1,4 @@
-" Section: basic
+" Section: basic {
 
 " Enable project specific vimrc
 " Used to try out different plugins
@@ -24,11 +24,11 @@ let mapleader = ","
 " Do not cross the line
 set colorcolumn=150
 
-"
+" }
 
-" Section: status line
+" Section: status line {
 
-  " Section: ruler
+  " Section: ruler {
     if has('cmdline_info')
         set ruler                   " Show the ruler
         set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
@@ -49,10 +49,10 @@ set colorcolumn=150
       set statusline+=\ [%{getcwd()}]          " Current dir
       set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   endif
-  "
-"
+  " }
+" }
 
-" Section: colors
+" Section: colors  {
 " colorscheme murphy "For vimdiff
 if &diff
   colorscheme evening
@@ -72,18 +72,18 @@ set background=light
 " let g:molokai_italic=0
 " colorscheme molokai
 
-"
+" }
 
 set mouse=r
 
-" Section: auto ops buffers
+" Section: auto ops buffers {
 set autoread
 set autowriteall
 autocmd FocusLost * silent! wall
 
+"}
 
-
-" Section: basic mapping
+" Section: basic mapping {
 imap jk <Esc>
 
 " Remove empty lines
@@ -110,7 +110,7 @@ map <leader>gf :e <cfile><cr>
 
 "
 
-" Section: external utilities
+" Section: external utilities {
 
 " Ack/ag
 if executable('ag')
@@ -119,13 +119,13 @@ endif
 
 "
 
-" Section: undo settings
+" Section: undo settings {
 " set undodir=~/.vim/undodir
 " set undofile   " Maintain undo history between sessions
 
-"
+" }
 
-" Section: Plugins
+" Section: Plugins {
 " Prereq : mkdir -p ~/.vim-plug/plugged
 " :source %
 " Run as :PlugInstall
@@ -162,38 +162,39 @@ Plug 'vimwiki/vimwiki'
 Plug 'mattn/calendar-vim'
 
 call plug#end()
-"
+" }
 
-" Section: plugin config
+" Section: plugin config {
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 " let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-""" If you want :UltiSnipsEdit to split your window.
+" If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 " let g:UltiSnipsSnippetsDir = "~/.vim-plug/plugged/vim-snippets/UltiSnips"
 " let g:UltiSnipsSnippetDirectories=['UltiSnips']
 
- " Fugitive shortcuts
- if isdirectory(expand("~/.vim-plug/plugged/vim-fugitive/"))
-   set diffopt+=vertical
-   nnoremap <silent> <leader>gs :Gstatus<CR>
-   nnoremap <silent> <leader>gd :Gdiff<CR>
-   nnoremap <silent> <leader>gc :Gcommit<CR>
-   nnoremap <silent> <leader>gb :Gblame<CR>
-   nnoremap <silent> <leader>gl :Glog<CR>
-   nnoremap <silent> <leader>gp :Git push<CR>
-   nnoremap <silent> <leader>gr :Gread<CR>
-   nnoremap <silent> <leader>gw :Gwrite<CR>
-   nnoremap <silent> <leader>ge :Gedit<CR>
-   " Mnemonic _i_nteractive
-   nnoremap <silent> <leader>gi :Git add -p %<CR>
-   nnoremap <silent> <leader>gg :SignifyToggle<CR>
- endif
+   " Fugitive shortcuts {
+   if isdirectory(expand("~/.vim-plug/plugged/vim-fugitive/"))
+     set diffopt+=vertical
+     nnoremap <silent> <leader>gs :Gstatus<CR>
+     nnoremap <silent> <leader>gd :Gdiff<CR>
+     nnoremap <silent> <leader>gc :Gcommit<CR>
+     nnoremap <silent> <leader>gb :Gblame<CR>
+     nnoremap <silent> <leader>gl :Glog<CR>
+     nnoremap <silent> <leader>gp :Git push<CR>
+     nnoremap <silent> <leader>gr :Gread<CR>
+     nnoremap <silent> <leader>gw :Gwrite<CR>
+     nnoremap <silent> <leader>ge :Gedit<CR>
+     " Mnemonic _i_nteractive
+     nnoremap <silent> <leader>gi :Git add -p %<CR>
+     nnoremap <silent> <leader>gg :SignifyToggle<CR>
+   endif
+   "}
+" }
 
-"
-
-" Functions
+" Functions {
 
   " Use ctrl+l to switch btn reln and noreln
   function! g:TglRelNmMode()
@@ -223,9 +224,9 @@ call plug#end()
     let @/=_s
     call cursor(l, c)
   endfunction
-  "
+"}
 
-  " set zj and zk go to find open folds
+  " set zj and zk go to find open folds {
   function! GoToOpenFold(direction)
     if (a:direction == "next")
       normal zj
@@ -242,11 +243,11 @@ call plug#end()
     endif
     call cursor(start, 0)
   endfunction
-  "
+  " }
 
-  " Session
+  " Session {
 
-     " Creates a session
+     " Creates a session {
       function! MakeSession()
         let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
         if (filewritable(b:sessiondir) != 2)
@@ -256,9 +257,9 @@ call plug#end()
         let b:filename = b:sessiondir . '/session.vim'
         exe "mksession! " . b:filename
       endfunction
-      "
+      " }
 
-      " Updates a session, BUT ONLY IF IT ALREADY EXISTS
+      " Updates a session, BUT ONLY IF IT ALREADY EXISTS {
       function! UpdateSession()
         let b:sessiondir = $HOME . "/.vim_session" . getcwd()
         let b:sessionfile = b:sessiondir . "session.vim"
@@ -266,9 +267,9 @@ call plug#end()
           exe "mksession! " . b:filename
         endif
       endfunction
-      "
+      " }
 
-      " Loads a session if it exists
+      " Loads a session if it exists {
       function! LoadSession()
         let b:sessiondir = $HOME . "/.vim_sessions" . getcwd()
         let b:sessionfile = b:sessiondir . "/session.vim"
@@ -280,7 +281,7 @@ call plug#end()
       endfunction
       "
 
-      " Mapping session
+      " Mapping session {
       "au VimEnter * nested :call LoadSession()
       "Forceful update session automatic
       au VimLeave * :call UpdateSession()
@@ -288,11 +289,11 @@ call plug#end()
       map ,u :call UpdateSession()<CR>
       map ,l :call LoadSession()<CR>
       map ,m :call MakeSession()<CR>
-      "
+      " }
 
-  "
+  " }
 
-  " Marker
+  " Marker {
     " Marker generate for the text files
     function! PrependMarker(lvl)
       let l:marker= "--"
@@ -313,11 +314,11 @@ call plug#end()
     nnoremap <silent> ,pmr2 :call PrependMarker(2)<CR>
     nnoremap <silent> ,pmr3 :call PrependMarker(3)<CR>
     nnoremap <silent> ,pmr4 :call PrependMarker(4)<CR>
-  "
+  " }
 
-"
+" }
 
-" Section: Formatter
+" Section: Formatter {
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
@@ -340,7 +341,7 @@ command Txml set ft=xml | execute "%!xmllint --format --recover - 2>/dev/null"
 command Tjs set ft=json | execute "%!json_reformat"
 
 " Keep single blank
-command -range=% KSB :<line1>,<line2>s/\n\,/\r\r/e
+command -range=% KSB :<line1>,<line2>s/\n\{3,}/\r\r/e
 
 " code review with blind eye for vertical distance
 "%s/\w/X/g
@@ -443,8 +444,6 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \   'options': '+m',
 \   'down':    len(<sid>buflist()) + 2
 \ })<CR>
-
-
 
 "}
 
