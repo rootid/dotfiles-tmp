@@ -29,6 +29,7 @@ delete-tools:
 	@stow -D tools -vvv
 
 update-vim:
+	# To update color clone repo and add color to vim/.vim/color dir and run this command
 	@echo "Updating vim config"
 	@stow -t ~ vim --no-folding -vvv
 	mkdir -p $(HOME)/.vim-plug/plugged

@@ -45,6 +45,8 @@ source $DOT_CONF_DIR/buku/functions.bash
 # distractions
 
 ## gtd tools
+source $DOT_CONF_DIR/boom/aliases.bash
+source $DOT_CONF_DIR/boom/functions.bash
 
 # gcalcli
 source $DOT_CONF_DIR/gcalcli/functions.bash

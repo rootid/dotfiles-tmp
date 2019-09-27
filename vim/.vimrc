@@ -417,7 +417,7 @@ nnoremap <silent> <Leader>spec :Files ~/spec<CR>
 nnoremap <silent> <Leader>test :Files app/views<CR>
 
 " Most recently used files
-nnoremap <silent> <Leader>m :FZFMru<CR>
+nnoremap <silent> <Leader>mru :FZFMru<CR>
 
 " List buffers
 nnoremap <silent> <Leader>b :Buffers<CR>
