@@ -14,3 +14,5 @@ alias gpm='git push -u origin master'
 alias gut='git ls-files --others --exclude-standard'
 alias gl1="git status --porcelain | awk '{print $2}'"
 alias glm="git ls-files --modified"
+alias glgc='git log --pretty=format:"%h"'
+
