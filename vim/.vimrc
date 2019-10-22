@@ -50,6 +50,10 @@ set colorcolumn=150
       set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   endif
   " }
+
+  " To display # of matches - https://vi.stackexchange.com/questions/15944/how-to-display-in-the-statusline-the-number-of-matches-from-a-search
+  set shm-=S
+
 " }
 
 " Section: colors  {

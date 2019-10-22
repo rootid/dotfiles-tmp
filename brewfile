@@ -47,6 +47,10 @@ cask 'meld'
 cask 'keepassxc' #Lib issue
 cask 'imagealpha'
 
+# Fonts
+cask 'font-iosevka'
+cask 'font-iosevka-slab'
+
 # Taskwarrior
 brew 'task'
 brew 'taskd'
