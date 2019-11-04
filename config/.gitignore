@@ -13,3 +13,4 @@ fix.out
 deploy.out
 *.out
 *.log
+.env

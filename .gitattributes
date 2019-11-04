@@ -1,5 +1,6 @@
 tools/gcalcli/functions.bash filter=git-crypt diff=git-crypt
 config/.gcalclirc filter=git-crypt diff=git-crypt
+config/.local/** filter=git-crypt diff=git-crypt
 tools/work/** filter=git-crypt diff=git-crypt
 tools/task-war-data/** filter=git-crypt diff=git-crypt
 data/pvt.txt filter=git-crypt diff=git-crypt

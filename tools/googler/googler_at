@@ -10,6 +10,10 @@ export GOOGLER_COLORS=eebXXj
   alias g_mw='googler -w merriam-webster.com'
 # Hacker News
   alias g_hn='googler -w news.ycombinator.com'
+
+#Hibernate
+  alias g_hb='googler -w hibernate.org'
+
 # grammar
   alias g_gmr='googler -w quickanddirtytips.com'
 
