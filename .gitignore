@@ -1,3 +1,6 @@
 tmp/
 
 ~$*.xls*
+
+tools/mpd/playlists/*
+tools/mpd/log

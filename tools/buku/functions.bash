@@ -40,6 +40,11 @@ function go_bk_algo() {
   buku -a $1 $2 --title algo
 }
 
+# Add interview links
+function go_bk_inv101() {
+  buku -a $1 $2 --title interview_links
+}
+
 # Add paper
 function go_bk_paper() {
   buku -a $1 $2 --title paper

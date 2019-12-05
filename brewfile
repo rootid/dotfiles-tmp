@@ -2,6 +2,14 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+# Interactive SSH
+brew 'mosh'
+
+# Podcasts
+# https://www.musicpd.org/clients/
+cask 'cantata'
+brew 'mpd'
+
 brew 'the_silver_searcher'
 brew 'fzf'
 brew 'fd'
@@ -71,6 +79,8 @@ brew 'rename'
 
 # syncthing - To sync the data
 brew 'watson'
+
+# Use bukubrow-host to manage the bookmarks thru browser
 brew 'buku'
 
 brew 'git-crypt'
