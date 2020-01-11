@@ -42,7 +42,6 @@ cask 'slack'
 cask 'vlc'
 cask 'flux'
 cask 'rescuetime'
-cask 'textwrangler'
 
 cask 'evernote'
 cask 'dropbox'

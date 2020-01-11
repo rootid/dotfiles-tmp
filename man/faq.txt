@@ -1,0 +1,5 @@
+1. Import gpg key to decrypt the private data like this
+   gpg --import <pvt_key.gpg> 
+   git-crytp unlock
+   
+# vim: tabstop=4 shiftwidth=4 softtabstop=4 expandtab:
