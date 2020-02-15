@@ -2,6 +2,9 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
+# Ruby env
+brew 'rbenv'
+
 # Interactive SSH
 brew 'mosh'
 

@@ -4,3 +4,5 @@ config/.local/** filter=git-crypt diff=git-crypt
 tools/work/** filter=git-crypt diff=git-crypt
 tools/task-war-data/** filter=git-crypt diff=git-crypt
 data/pvt.txt filter=git-crypt diff=git-crypt
+TODO-new-place/* filter=git-crypt diff=git-crypt
+TODO-new-place/* filter=git-crypt diff=git-crypt

@@ -1,0 +1,3 @@
+Programming Collective Intelligence
+Domain-Driven Design: Tackling Complexity in the Heart of Software
+The Art of Electronics 
