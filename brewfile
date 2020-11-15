@@ -47,6 +47,7 @@ cask 'flux'
 cask 'rescuetime'
 
 cask 'evernote'
+cask 'notion'
 cask 'dropbox'
 cask 'google-backup-and-sync'
 cask 'imageoptim'

@@ -37,5 +37,8 @@ update-vim:
 unlink-vim:
 	@stow -D vim
 
+unlink-tools:
+	@stow -D tools
+
 # stow test the changes first eg. stow -n -t ~ ssh -vvv
 # vim: noexpandtab

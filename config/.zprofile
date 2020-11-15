@@ -1,4 +1,4 @@
-source ~/.bashrc
+source ~/.zshrc
 
 eval "$(rbenv init -)"
 # added by Anaconda3 2019.07 installer

@@ -1,21 +1,29 @@
-# Bash history setting
 
 # Undocumented feature which sets the size to "unlimited".
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
 export HISTFILESIZE=
 export HISTSIZE=
+export SAVEHIST=
 export HISTTIMEFORMAT="[%F %T] "
+
+# https://www.soberkoder.com/better-zsh-history/
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+# following should be turned off, if sharing history via setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
 
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
-export HISTFILE=~/.bash_eternal_history
+HISTFILE=~/.zsh_eternal_history
 
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Rename terminal
-PS1="\u@mat \W\$ "
+# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+PS1="%n@mat %~$ "
 
 # Sourcing aliases
 DOT_CONF_DIR=~
@@ -34,46 +42,47 @@ source $DOT_CONF_DIR/java/aliases.sh
 source $DOT_CONF_DIR/java/functions.sh
 
 source $DOT_CONF_DIR/git/aliases.sh
-source $DOT_CONF_DIR/git/git-completion.bash
+# https://stackoverflow.com/questions/28028740/git-tab-completion-in-zsh-throwing-errors
+#source $DOT_CONF_DIR/git/git-completion.zsh
 
-source $DOT_CONF_DIR/ssh/functions.bash
+source $DOT_CONF_DIR/ssh/functions.zsh
 
 # Bookmark tool
-source $DOT_CONF_DIR/buku/aliases.bash
-source $DOT_CONF_DIR/buku/functions.bash
+source $DOT_CONF_DIR/buku/aliases.zsh
+source $DOT_CONF_DIR/buku/functions.zsh
 
 # distractions
 
 ## gtd tools
-source $DOT_CONF_DIR/boom/aliases.bash
-source $DOT_CONF_DIR/boom/functions.bash
+source $DOT_CONF_DIR/boom/aliases.zsh
+source $DOT_CONF_DIR/boom/functions.zsh
 
 # gcalcli
-source $DOT_CONF_DIR/gcalcli/functions.bash
+source $DOT_CONF_DIR/gcalcli/functions.zsh
 
 # Taskwarrior
-source $DOT_CONF_DIR/task-war/functions.bash
-source $DOT_CONF_DIR/task-war/aliases.bash
+source $DOT_CONF_DIR/task-war/functions.zsh
+source $DOT_CONF_DIR/task-war/aliases.zsh
 
 # Watson
-source $DOT_CONF_DIR/watson/functions.bash
+source $DOT_CONF_DIR/watson/functions.zsh
 
 
 # Video
-source $DOT_CONF_DIR/video-utils/functions.bash
+source $DOT_CONF_DIR/video-utils/functions.zsh
 
 # Googler
-source $DOT_CONF_DIR/googler/googler-completion.bash
+# source $DOT_CONF_DIR/googler/googler-completion.zsh
 source $DOT_CONF_DIR/googler/googler_at
 
 # For work only
-source $DOT_CONF_DIR/work/pp-work.bash
+source $DOT_CONF_DIR/work/pp-work.zsh
 
 # Wiki dictionary
-source $DOT_CONF_DIR/wkdict/aliases.bash
+source $DOT_CONF_DIR/wkdict/aliases.zsh
 
 # GPG
-source $DOT_CONF_DIR/gpg/functions.bash
+source $DOT_CONF_DIR/gpg/functions.zsh
 
 # GO
 export GOPATH=$HOME/go
@@ -114,6 +123,6 @@ export REVIEW_BASE=master
 # For review use git review or git reviewone
 # REVIEW_BASE=master git review
 
-source /usr/local/opt/autoenv/activate.sh
+# source /usr/local/opt/autoenv/activate.sh
 
 # vim: ai ts=2 sw=2 et sts=2 ft=sh
