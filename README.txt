@@ -5,6 +5,10 @@
 - make update
 
 # Configure VIM
+- vim .
+- !mkdir -p ~/.vim-plug/plugged
+- :source %
+- :PlugInstall
 - make update-vim
 
 # Update all default config

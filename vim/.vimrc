@@ -181,7 +181,11 @@ call plug#end()
 
    " Fugitive shortcuts {
    if isdirectory(expand("~/.vim-plug/plugged/vim-fugitive/"))
-     set diffopt+=vertical
+    if &diff
+      set diffopt-=internal
+      set diffopt+=vertical
+     endif
+     "set diffopt+=vertical
      nnoremap <silent> <leader>gs :Gstatus<CR>
      nnoremap <silent> <leader>gd :Gdiff<CR>
      nnoremap <silent> <leader>gc :Gcommit<CR>
