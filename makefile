@@ -4,6 +4,10 @@ install:
 	@echo "Installing Homebrew on mac"
 	homebrew/install.sh
 
+install-omz:
+	@echo "Installing ZSH on mac"
+	omz/install.sh
+
 update:
 	@echo "Adding apps using brewfile"
 	brew bundle
@@ -27,6 +31,10 @@ tools:
 delete-tools:
 	@echo "deleting tools shortcuts"
 	@stow -D tools -vvv
+
+delete-config:
+	@echo "deleting config shortcuts"
+	@stow -D config -vvv
 
 update-vim:
 	# To update color clone repo and add color to vim/.vim/color dir and run this command
