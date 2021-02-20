@@ -1,4 +1,5 @@
 # Bash history setting
+# set -x
 
 # Undocumented feature which sets the size to "unlimited".
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
@@ -58,7 +59,6 @@ source $DOT_CONF_DIR/task-war/aliases.bash
 # Watson
 source $DOT_CONF_DIR/watson/functions.bash
 
-
 # Video
 source $DOT_CONF_DIR/video-utils/functions.bash
 
@@ -114,6 +114,13 @@ export REVIEW_BASE=master
 # For review use git review or git reviewone
 # REVIEW_BASE=master git review
 
-source /usr/local/opt/autoenv/activate.sh
+# source /usr/local/opt/autoenv/activate.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # vim: ai ts=2 sw=2 et sts=2 ft=sh
+source ~/.autoenv/activate.sh

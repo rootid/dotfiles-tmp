@@ -9,3 +9,6 @@
 :au FileType java :iabbrev ctor The Constructor
 :au FileType java :iabbrev ins instance
 :au FileType java :iabbrev toa the object array
+:au FileType java :iabbrev syso System.out.println("");
+:au FileType java :iabbrev nc public class { <CR> }
+:au FileType java :iabbrev main public static void main (String[] args) { <CR> }

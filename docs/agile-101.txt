@@ -1,0 +1,21 @@
+https://agilemanifesto.org/
+https://agilemanifesto.org/principles.html
+
+
+-- Value individuals and interactions over processes and tools
+-- Value working software over comprehensive documentation
+-- Value customer collaboration over contract negotiation
+-- Value responding to change over following a plan
+
+Developers dislike:
+- Loosely estimating dates, then having management set them in stone
+- Spending more time talking about things than it would take to do them ("planning")
+- convincing business leaders that engineering is more than just writing code
+- sitting in meetings that add little value to the team
+- arguing over made up numbers for vague deliverables
+- having their mistakes, miscalculations, and other normal aspects of software development enumerated and held against them, as though it was an actual problem
+- having "scrum masters" come up with straw men to justify even more process
+- reporting to too many non-technical managers
+
+
+http://programming-motherfucker.com/become.html
