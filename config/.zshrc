@@ -42,7 +42,7 @@ export UPDATE_ZSH_DAYS=5
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -185,4 +185,5 @@ setopt INC_APPEND_HISTORY # Write to the history file immediately, not when the 
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
 HISTFILE=~/.zsh_eternal_history
 
-
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
