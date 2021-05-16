@@ -8,7 +8,7 @@ install-omz:
 	@echo "Installing ZSH on mac"
 	omz/install.sh
 
-update:
+brew_update:
 	@echo "Adding apps using brewfile"
 	brew bundle
 

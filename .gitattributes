@@ -1,4 +1,5 @@
-tools/gcalcli/functions.bash filter=git-crypt diff=git-crypt
+tools/gcalcli/functions.sh filter=git-crypt diff=git-crypt
+tools/.newsboat/urls filter=git-crypt diff=git-crypt
 config/.gcalclirc filter=git-crypt diff=git-crypt
 config/.local/** filter=git-crypt diff=git-crypt
 config/.gitconfig filter=git-crypt diff=git-crypt

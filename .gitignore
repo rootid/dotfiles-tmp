@@ -4,3 +4,5 @@ tmp/
 
 tools/mpd/playlists/*
 tools/mpd/log
+
+Brewfile.lock.json

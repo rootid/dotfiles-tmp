@@ -1,5 +1,6 @@
 
-# feeds
+# Please Refer - https://newsboat.org/releases/2.23/docs/newsboat.html
+# Feeds
 
 auto-reload yes
 reload-time 120
@@ -7,8 +8,9 @@ reload-threads 4
 download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
+max-items 100
 
-# display
+# Display
 
 show-read-feeds no
 feed-sort-order unreadarticlecount-asc
@@ -22,7 +24,9 @@ color listfocus_unread blue default reverse bold
 
 goto-next-feed no
 
-browser "/Applications/Firefox_Developer_Edition.app/Contents/MacOS/firefox  %u"
+# Install Firefox Developer Edition and update the path
+# browser "/Applications/Firefox_Developer_Edition.app/Contents/MacOS/firefox  %u"
+browser "/Applications/Firefox.app/Contents/MacOS/firefox --new-tab  %u"
 
 bind-key j down feedlist
 bind-key k up feedlist

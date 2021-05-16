@@ -124,7 +124,7 @@ source $DOT_CONF_DIR/boom/aliases.zsh
 source $DOT_CONF_DIR/boom/functions.zsh
 
 # gcalcli
-source $DOT_CONF_DIR/gcalcli/functions.zsh
+source $DOT_CONF_DIR/gcalcli/functions.sh
 
 # Taskwarrior
 source $DOT_CONF_DIR/task-war/functions.zsh
@@ -154,6 +154,12 @@ source $DOT_CONF_DIR/fonts/functions.zsh
 
 # brew
 source $DOT_CONF_DIR/brew/functions.zsh
+
+# GIT
+source $DOT_CONF_DIR/git/functions.zsh
+
+# OS utils
+source $DOT_CONF_DIR/os_utils/functions.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -190,3 +196,10 @@ HISTFILE=~/.zsh_eternal_history
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.7.2
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/vmat/.sdkman"
+[[ -s "/Users/vmat/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vmat/.sdkman/bin/sdkman-init.sh"

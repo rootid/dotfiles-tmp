@@ -5,7 +5,7 @@ function go_brew_list_all_formulas() {
 }
 
 # Verify the installation
-function go_brew_verify_the_installation() {
+function go_brew_verify_installation() {
   brew doctor
 }
 

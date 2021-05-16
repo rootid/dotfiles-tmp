@@ -3,7 +3,8 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 
 # Ruby env
-brew 'rbenv'
+brew 'chruby'
+brew 'ruby-install'
 
 # Interactive SSH
 brew 'mosh'
@@ -39,8 +40,8 @@ cask 'insomnia'
 cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
-cask 'handbrake'
-cask 'seashore'
+cask 'handbrake' # video formatter
+cask 'seashore' # Image editing software
 cask 'slack'
 cask 'vlc'
 cask 'flux'
@@ -100,3 +101,7 @@ brew 'readline'
 brew 'sqlite3'
 brew 'xz'
 brew 'zlib'
+
+# Framework for language learning
+brew 'exercism'
+brew 's3cmd'
