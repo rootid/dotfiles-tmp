@@ -94,12 +94,9 @@ brew 'taskd'
 brew 'tasksh'
 brew 'timewarrior'
 
-#brew 'bash-completion'
-
 brew 'pass' # Password manager
 brew 'openssl'
 brew 'readline'
 brew 'sqlite3'
 brew 'xz'
 brew 'zlib'
-

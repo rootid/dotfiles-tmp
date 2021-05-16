@@ -91,7 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-
 # Sourcing aliases
 DOT_CONF_DIR=~
 
@@ -134,7 +133,6 @@ source $DOT_CONF_DIR/task-war/aliases.zsh
 # Watson
 source $DOT_CONF_DIR/watson/functions.zsh
 
-
 # Video
 source $DOT_CONF_DIR/video-utils/functions.zsh
 
@@ -151,6 +149,11 @@ source $DOT_CONF_DIR/wkdict/aliases.zsh
 # GPG
 source $DOT_CONF_DIR/gpg/functions.zsh
 
+# Font
+source $DOT_CONF_DIR/fonts/functions.zsh
+
+# brew
+source $DOT_CONF_DIR/brew/functions.zsh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
