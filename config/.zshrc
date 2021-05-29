@@ -158,6 +158,9 @@ source $DOT_CONF_DIR/brew/functions.zsh
 # GIT
 source $DOT_CONF_DIR/git/functions.zsh
 
+# GIT Crypt
+source $DOT_CONF_DIR/git-crypt/functions.sh
+
 # OS utils
 source $DOT_CONF_DIR/os_utils/functions.sh
 
