@@ -164,6 +164,10 @@ source $DOT_CONF_DIR/git-crypt/functions.sh
 # OS utils
 source $DOT_CONF_DIR/os_utils/functions.sh
 
+CUSTOM_BIN=$HOME/dotfiles/bin
+CUSTOM_UTIL=$HOME/dotfiles/util
+export PATH=$CUSTOM_BIN:$CUSTOM_UTIL:$PATH
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
