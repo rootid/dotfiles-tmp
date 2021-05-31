@@ -6,6 +6,7 @@ set exrc
 
 set nocompatible
 filetype plugin on
+set modeline
 
 if !exists("g:syntax_on")
     syntax enable
@@ -361,6 +362,8 @@ nmap ,f1 :g/.\{100,\}/ .!par w100<CR>
 autocmd FileType c,cpp,java,go,javascript,python,rst,ruby,rust,yml,perl autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 autocmd FileType haskell,python,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
+
+autocmd FileType make setlocal noexpandtab
 
 " }
 

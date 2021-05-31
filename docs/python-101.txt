@@ -22,4 +22,3 @@ pip freeze > requirements.txt
   echo "source env/bin/activate" >> .env
 6. # To exit python virtual env
   deactivate
-
