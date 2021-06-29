@@ -203,10 +203,13 @@ HISTFILE=~/.zsh_eternal_history
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.7.2
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/vmat/.sdkman"
+export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "/Users/vmat/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/vmat/.sdkman/bin/sdkman-init.sh"
+
+export PATH="/usr/local/sbin:$PATH"

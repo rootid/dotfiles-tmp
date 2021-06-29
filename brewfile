@@ -41,7 +41,7 @@ cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
 cask 'handbrake' # video formatter
-cask 'seashore' # Image editing software
+#cask 'seashore' # Image editing software
 cask 'slack'
 cask 'vlc'
 cask 'flux'
@@ -60,8 +60,8 @@ cask 'keepassxc' #Lib issue
 cask 'imagealpha'
 
 # Fonts
-cask 'font-iosevka'
-cask 'font-iosevka-slab'
+#cask 'font-iosevka'
+#cask 'font-iosevka-slab'
 
 # Taskwarrior
 brew 'task'
