@@ -31,6 +31,7 @@ include /usr/local/share/doc/task/rc/solarized-light-256.theme
 
 # Files
 data.location=~/task-war-data
+#data.location=/tmp/task
 
 # Follows Fibo numbers
 urgency.user.project.fun.coefficient = 1.0
@@ -116,3 +117,4 @@ context.delete=+delete
 context.none=+none
 context.next=+next
 context.company=+company
+context.work=work.plan
