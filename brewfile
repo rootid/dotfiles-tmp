@@ -6,6 +6,9 @@ tap 'homebrew/bundle'
 brew 'chruby'
 brew 'ruby-install'
 
+# pyenv
+brew 'pyenv'
+
 # Interactive SSH
 brew 'mosh'
 
