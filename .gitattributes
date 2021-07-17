@@ -11,3 +11,4 @@ data/pvt.txt filter=git-crypt diff=git-crypt
 TODO-new-place/* filter=git-crypt diff=git-crypt
 TODO-new-place/* filter=git-crypt diff=git-crypt
 config/.taskrc filter=git-crypt diff=git-crypt
+config/.togglrc filter=git-crypt diff=git-crypt

@@ -164,6 +164,9 @@ source $DOT_CONF_DIR/git-crypt/functions.sh
 # OS utils
 source $DOT_CONF_DIR/os_utils/functions.sh
 
+# Toggle
+source $DOT_CONF_DIR/toggl/functions.sh
+
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/util
 export PATH=$CUSTOM_BIN:$CUSTOM_UTIL:$PATH

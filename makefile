@@ -1,51 +1,51 @@
-.PHONY: install update add-fonts add-configs tools update-vim unlink-vim
+.PHONY: install install_omz update_brew add_fonts add_config update_ssh_config update_tools unlink_tools unlink_config update_vim unlink_vim unlink_tools
 
 install:
 	@echo "Installing Homebrew on mac"
 	homebrew/install.sh
 
-install-omz:
+install_omz:
 	@echo "Installing ZSH on mac"
 	omz/install.sh
 
-brew_update:
+update_brew:
 	@echo "Adding apps using brewfile"
 	brew bundle
 
-add-fonts:
+add_fonts:
 	@echo "Adding font"
 	fonts/install.sh
 
-add-config:
+add_config:
 	@echo "Adding/updating config"
 	@stow -t ~ config -vvv
 
-update-ssh-config:
+update_ssh_config:
 	@echo "Adding/updating ssh config"
 	@stow -t ~ ssh -vvv
 
-tools:
+update_tools:
 	@echo "Updating tools shortcuts"
 	@stow -t ~ tools --no-folding -vvv
 
-delete-tools:
-	@echo "deleting tools shortcuts"
+unlink_tools:
+	@echo "unlinking tools shortcuts"
 	@stow -D tools -vvv
 
-delete-config:
-	@echo "deleting config shortcuts"
+unlink_config:
+	@echo "unlinking config shortcuts"
 	@stow -D config -vvv
 
-update-vim:
+update_vim:
 	# To update color clone repo and add color to vim/.vim/color dir and run this command
 	@echo "Updating vim config"
 	@stow -t ~ vim --no-folding -vvv
 	mkdir -p $(HOME)/.vim-plug/plugged
 
-unlink-vim:
+unlink_vim:
 	@stow -D vim
 
-unlink-tools:
+unlink_tools:
 	@stow -D tools
 
 # stow test the changes first eg. stow -n -t ~ ssh -vvv
