@@ -8,6 +8,10 @@ install_omz:
 	@echo "Installing ZSH on mac"
 	omz/install.sh
 
+install_python_bins:
+	@echo "Installing python bins"
+	pip3 install -r tools/python/requirements.txt
+
 update_brew:
 	@echo "Adding apps using brewfile"
 	brew bundle
