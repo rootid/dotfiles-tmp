@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Install node
 #To list the node versions
 #curl -s http://nodejs.org/dist/index.tab | awk '/^v[0-9]/{ print $1 }' | less
 version=v5.0.0

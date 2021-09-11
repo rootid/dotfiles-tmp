@@ -94,6 +94,9 @@ source $ZSH/oh-my-zsh.sh
 # Sourcing aliases
 DOT_CONF_DIR=~
 
+# Workflow
+source $DOT_CONF_DIR/workflow/functions.sh
+
 source $DOT_CONF_DIR/firefox/aliases.sh
 
 source $DOT_CONF_DIR/ack/aliases.sh

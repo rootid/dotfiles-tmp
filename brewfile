@@ -9,6 +9,9 @@ brew 'ruby-install'
 # pyenv
 brew 'pyenv'
 
+# Editor
+cask 'boostnote'
+
 # Interactive SSH
 brew 'mosh'
 
