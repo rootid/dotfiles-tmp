@@ -10,7 +10,8 @@ dns_file=$1
 
 if [ -z ${dns_file} ]
 then
-  dns_file=$HOME/.block-dns
+  #dns_file=$HOME/.block-dns
+  dns_file=$HOME/.force-block-dns
 fi
 if [ ! -f ${dns_file} ]
 then
