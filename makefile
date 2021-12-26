@@ -1,4 +1,4 @@
-.PHONY: install install_omz update_brew add_fonts add_config update_ssh_config update_tools unlink_tools unlink_config update_vim unlink_vim unlink_tools
+.PHONY: install install_omz update_brew add_fonts add_config update_ssh_config update_tools unlink_config update_vim unlink_vim unlink_tools
 
 install:
 	@echo "Installing Homebrew on mac"
@@ -48,9 +48,6 @@ update_vim:
 
 unlink_vim:
 	@stow -D vim
-
-unlink_tools:
-	@stow -D tools
 
 # stow test the changes first eg. stow -n -t ~ ssh -vvv
 # vim: noexpandtab
