@@ -1,12 +1,9 @@
 tmp/
 *.out
-
 ~$*.xls*
-
 tools/mpd/playlists/*
 tools/mpd/log
 
 Brewfile.lock.json
 
-config/.local/bin/
-config/.local/pipx/
+config/.local
