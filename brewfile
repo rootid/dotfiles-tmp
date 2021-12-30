@@ -8,9 +8,13 @@ brew 'ruby-install'
 
 # pyenv
 brew 'pyenv'
+brew 'pipx'
 
 # Editor
 cask 'boostnote'
+
+# screenshot app
+cask 'flameshot'
 
 # Interactive SSH
 brew 'mosh'
@@ -20,12 +24,14 @@ brew 'mosh'
 cask 'cantata'
 brew 'mpd'
 
+# Search utlities
 brew 'the_silver_searcher'
+brew 'ack'
 brew 'fzf'
+brew 'ripgrep'
 brew 'fd'
 
 brew 'ssh-copy-id'
-brew 'ack'
 brew 'coreutils'
 brew 'go'
 brew 'grc'
@@ -51,16 +57,16 @@ cask 'handbrake' # video formatter
 cask 'slack'
 cask 'vlc'
 cask 'flux'
-cask 'rescuetime'
+#cask 'rescuetime'
 
-cask 'evernote'
-cask 'notion'
+#cask 'evernote' # install and update using UI
+#cask 'notion' # install and update using UI
 cask 'dropbox'
 cask 'google-backup-and-sync'
 cask 'imageoptim'
 cask 'dbeaver-community'
 cask 'docker'
-cask 'virtualbox'
+#cask 'virtualbox' # we'll use the docker and K8
 cask 'meld'
 cask 'keepassxc' #Lib issue
 cask 'imagealpha'
@@ -70,9 +76,6 @@ cask 'imagealpha'
 #cask 'font-iosevka-slab'
 
 # Taskwarrior
-brew 'task'
-brew 'taskd'
-brew 'tasks'
 brew 'youtube-dl'
 brew 'handbrake'
 brew 'imageoptim-cli'
@@ -87,7 +90,7 @@ brew 'newsboat'
 brew 'rename'
 
 # syncthing - To sync the data
-brew 'watson'
+#brew 'watson' # use the Toggletrack to track the time, has mobile app
 
 # Use bukubrow-host to manage the bookmarks thru browser
 brew 'buku'
@@ -98,6 +101,7 @@ brew 'gpg2'
 # Taskwarrior
 brew 'task'
 brew 'taskd'
+#brew 'tasks' # Not available
 brew 'tasksh'
 brew 'timewarrior'
 
