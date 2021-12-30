@@ -13,6 +13,9 @@ brew 'pipx'
 # Editor
 cask 'boostnote'
 
+# screenshot app
+cask 'flameshot'
+
 # Interactive SSH
 brew 'mosh'
 
@@ -21,12 +24,14 @@ brew 'mosh'
 cask 'cantata'
 brew 'mpd'
 
+# Search utlities
 brew 'the_silver_searcher'
+brew 'ack'
 brew 'fzf'
+brew 'ripgrep'
 brew 'fd'
 
 brew 'ssh-copy-id'
-brew 'ack'
 brew 'coreutils'
 brew 'go'
 brew 'grc'

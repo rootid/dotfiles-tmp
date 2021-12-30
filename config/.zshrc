@@ -229,3 +229,5 @@ export PATH="$PATH:/Users/vmat/Library/Python/3.9/bin"
 
 # Created by `pipx` on 2021-12-11 04:40:26
 export PATH="$PATH:/Users/vmat/dotfiles/config/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

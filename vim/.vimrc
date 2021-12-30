@@ -135,6 +135,8 @@ endif
 " :source %
 " Run as :PlugInstall
 call plug#begin('~/.vim-plug/plugged')
+
+Plug 'KevinBockelandt/notoire'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim' "editorconfig
@@ -488,6 +490,11 @@ endif
 "nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "}
+"
+
+" Section: smart notes {
+let g:notoire_folders = ['~/gen-next/vs_notes/fleeting_notes', '~/gen-next/vs_notes/literature_notes', '~/gen-next/vs_notes/stable_notes']
+"}
 
 " Section: Empty template {
 "}
@@ -495,5 +502,25 @@ endif
 if has('python3')
   silent! python3 1
 endif
+
+" Section: copy current file name (relative/absolute) to system clipboard {
+if has("mac") || has("gui_macvim") || has("gui_mac")
+  " filename       (foo.txt)
+  nnoremap <leader>cf :let @*=expand("%:t")<CR>
+
+  " absolute path  (/something/src/foo.txt)
+  nnoremap <leader>cF :let @*=expand("%:p")<CR>
+endif
+
+" copy current file name (relative/absolute) to system clipboard (Linux version)
+if has("gui_gtk") || has("gui_gtk2") || has("gui_gnome") || has("unix")
+  " filename (foo.txt)
+  nnoremap <leader>cf :let @+=expand("%:t")<CR>
+
+  " absolute path (/something/src/foo.txt)
+  nnoremap <leader>cF :let @+=expand("%:p")<CR>
+
+endif
+"}
 
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:
