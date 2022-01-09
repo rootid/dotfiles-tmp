@@ -522,5 +522,9 @@ if has("gui_gtk") || has("gui_gtk2") || has("gui_gnome") || has("unix")
 
 endif
 "}
+" Section: vimwiki configuration {
+let g:vimwiki_list = [{'path': '~/gen-next/vs_notes/mind_maps',
+                      \ 'syntax': 'media', 'ext': '.puml'}]
 
+"}
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:
