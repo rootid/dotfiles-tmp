@@ -231,3 +231,21 @@ export PATH="$PATH:/Users/vmat/Library/Python/3.9/bin"
 export PATH="$PATH:/Users/vmat/dotfiles/config/.local/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Enable bazel Autocomplete
+#zstyle :compinstall filename '/home/tradical/.zshrc'
+autoload -Uz compinit
+#compinit
+#
+#
+# Kubectl auto completion
+# source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+# add autocomplete permanently to your zsh shell
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc'; fi
