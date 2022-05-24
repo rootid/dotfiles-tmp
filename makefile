@@ -1,4 +1,4 @@
-.PHONY: install install_omz update_brew add_fonts link_config update_ssh_config link_tools unlink_config update_vim unlink_vim unlink_tools
+.PHONY: install install_omz brew_update add_fonts link_config update_ssh_config link_tools unlink_config update_vim unlink_vim unlink_tools
 
 install:
 	@echo "Installing Homebrew on mac"
@@ -12,7 +12,7 @@ install_python_bins:
 	@echo "Installing python bins"
 	pip3 install -r tools/python/requirements.txt
 
-update_brew:
+brew_update:
 	@echo "Adding apps using brewfile"
 	brew bundle
 

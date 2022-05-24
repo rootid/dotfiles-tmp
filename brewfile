@@ -66,7 +66,6 @@ cask 'dropbox'
 cask 'google-backup-and-sync'
 cask 'imageoptim'
 cask 'dbeaver-community'
-cask 'docker'
 #cask 'virtualbox' # we'll use the docker and K8
 cask 'meld'
 #cask 'keepassxc' #Lib issue
@@ -116,3 +115,8 @@ brew 'zlib'
 # Framework for language learning
 brew 'exercism'
 brew 's3cmd'
+
+# containers
+brew 'kubectl'
+brew 'helm'
+cask 'docker'
