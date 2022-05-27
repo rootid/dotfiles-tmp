@@ -120,3 +120,6 @@ brew 's3cmd'
 brew 'kubectl'
 brew 'helm'
 cask 'docker'
+
+# Build tool
+brew 'bazelisk'
