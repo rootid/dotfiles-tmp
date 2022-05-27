@@ -1,5 +1,9 @@
 export GOOGLER_COLORS=eebXXj
 
+# PWC
+  alias g_fin1='googler -w viewpoint.pwc.com'
+# Investopedia
+  alias g_fin='googler -w www.investopedia.com'
 # Cached
   alias g_bael='googler -w www.baeldung.com'
 # Stack Overflow

@@ -170,6 +170,10 @@ source $DOT_CONF_DIR/os_utils/functions.sh
 # Toggle
 source $DOT_CONF_DIR/toggl/functions.sh
 
+# K8
+source $DOT_CONF_DIR/k8/kube_cluster_functions.sh
+source $DOT_CONF_DIR/k8/kube_functions.sh
+
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/util
 export PATH=$CUSTOM_BIN:$CUSTOM_UTIL:$PATH
@@ -231,3 +235,21 @@ export PATH="$PATH:/Users/vmat/Library/Python/3.9/bin"
 export PATH="$PATH:/Users/vmat/dotfiles/config/.local/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Enable bazel Autocomplete
+#zstyle :compinstall filename '/home/tradical/.zshrc'
+autoload -Uz compinit
+#compinit
+#
+#
+# Kubectl auto completion
+# source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
+# add autocomplete permanently to your zsh shell
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc'; fi

@@ -154,6 +154,7 @@ Plug 'godlygeek/tabular'
 "Plug 'airblade/vim-gitgutter'
 Plug 'morhetz/gruvbox'
 Plug 'pbogut/fzf-mru.vim'
+Plug 'dkarter/bullets.vim'
 " Plug 'inkarkat/vim-SpellCheck'
 " Plug 'b4b4r07/vim-sqlfmt'
 " Plug 'mattn/vim-sqlfmt'
@@ -370,9 +371,24 @@ autocmd FileType make setlocal noexpandtab
 " }
 
 " Section: Folds {
+
+function! VimNotesFolds(lnum)
+  let thisline = getline(a:lnum)
+  if thisline =~ "/$"
+    return '1'
+  elseif thisline =~ "-$"
+    return '1'
+  else
+    return '2'
+  endif
+endfunction
+
 autocmd BufRead *.vim,.*vimrc set foldenable foldmethod=marker foldlevel=0
 set foldmethod=syntax
 set foldmarker={,}
+
+" Folds for the note
+autocmd FileType note setlocal expandtab shiftwidth=2 softtabstop=2 foldmethod=expr foldexpr=VimNotesFolds(v:lnum)
 
 " XML folding
 let g:xml_syntax_folding=1
@@ -493,7 +509,8 @@ endif
 "
 
 " Section: smart notes {
-let g:notoire_folders = ['~/gen-next/vs_notes/fleeting_notes', '~/gen-next/vs_notes/literature_notes', '~/gen-next/vs_notes/stable_notes']
+" Make another notes type in in the index fleeting, literature, stable
+let g:notoire_folders = ['~/gen-next/vs_notes/stable_notes']
 "}
 
 " Section: Empty template {
@@ -522,5 +539,20 @@ if has("gui_gtk") || has("gui_gtk2") || has("gui_gnome") || has("unix")
 
 endif
 "}
+" Section: vimwiki configuration {
+let g:vimwiki_list = [{'path': '~/gen-next/vs_notes/mind_maps',
+                      \ 'syntax': 'media', 'ext': '.puml'}]
 
+"}
+
+" Section: bullet configuration {
+" https://github.com/dkarter/bullets.vim
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'note',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch'
+    \]
+"}
 " vim: set et tw=79 foldmarker={,} foldlevel=0 foldmethod=marker spell:

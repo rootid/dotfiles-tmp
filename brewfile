@@ -51,6 +51,7 @@ cask 'postman'
 cask 'insomnia'
 cask 'atom'
 cask 'firefox'
+cask 'firefox-developer-edition'
 cask 'google-chrome'
 cask 'handbrake' # video formatter
 #cask 'seashore' # Image editing software
@@ -65,10 +66,9 @@ cask 'dropbox'
 cask 'google-backup-and-sync'
 cask 'imageoptim'
 cask 'dbeaver-community'
-cask 'docker'
 #cask 'virtualbox' # we'll use the docker and K8
 cask 'meld'
-cask 'keepassxc' #Lib issue
+#cask 'keepassxc' #Lib issue
 cask 'imagealpha'
 
 # Fonts
@@ -115,3 +115,11 @@ brew 'zlib'
 # Framework for language learning
 brew 'exercism'
 brew 's3cmd'
+
+# containers
+brew 'kubectl'
+brew 'helm'
+cask 'docker'
+
+# Build tool
+brew 'bazelisk'
