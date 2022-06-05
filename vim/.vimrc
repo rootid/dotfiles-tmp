@@ -25,6 +25,9 @@ let mapleader = ","
 " Do not cross the line
 set colorcolumn=150
 
+" Make smart search default
+set smartcase
+set ignorecase
 " }
 
 " Section: status line {
