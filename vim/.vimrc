@@ -225,7 +225,7 @@ call plug#end()
     set ignorecase
   endfunction
 
-  nnoremap ,f :call g:SrchSmart()<cr>
+  nnoremap ,f2 :call g:SrchSmart()<cr>
 
   " Strip whitespace
   function! StripTrailingWhitespace()
