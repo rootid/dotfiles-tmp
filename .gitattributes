@@ -10,6 +10,7 @@ tools/task-war-data/** filter=git-crypt diff=git-crypt
 tools/task-war/** filter=git-crypt diff=git-crypt
 data/** filter=git-crypt diff=git-crypt
 TODO-new-place/* filter=git-crypt diff=git-crypt
-TODO-new-place/* filter=git-crypt diff=git-crypt
 config/.taskrc filter=git-crypt diff=git-crypt
 config/.togglrc filter=git-crypt diff=git-crypt
+data/leisure_tasks.txt filter=git-crypt diff=git-crypt
+data/todo/todo.txt filter=git-crypt diff=git-crypt
