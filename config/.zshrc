@@ -92,87 +92,93 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Sourcing aliases
-DOT_CONF_DIR=~
+ROOT_DIR=~
 
 # Workflow
-source $DOT_CONF_DIR/workflow/functions.sh
+source $ROOT_DIR/workflow/functions.sh
 
-source $DOT_CONF_DIR/firefox/aliases.sh
+source $ROOT_DIR/firefox/aliases.sh
 
-source $DOT_CONF_DIR/ack/aliases.sh
+source $ROOT_DIR/ack/aliases.sh
 
-source $DOT_CONF_DIR/tmux/aliases.sh
+source $ROOT_DIR/tmux/aliases.sh
 
-source $DOT_CONF_DIR/docker/aliases.sh
+source $ROOT_DIR/docker/aliases.sh
 
-source $DOT_CONF_DIR/bash/aliases.sh
+source $ROOT_DIR/bash/aliases.sh
 
-source $DOT_CONF_DIR/java/aliases.sh
-source $DOT_CONF_DIR/java/functions.sh
+source $ROOT_DIR/java/aliases.sh
+source $ROOT_DIR/java/functions.sh
 
-source $DOT_CONF_DIR/git/aliases.sh
+source $ROOT_DIR/git/aliases.sh
 # https://stackoverflow.com/questions/28028740/git-tab-completion-in-zsh-throwing-errors
-#source $DOT_CONF_DIR/git/git-completion.zsh
+#source $ROOT_DIR/git/git-completion.zsh
 
-source $DOT_CONF_DIR/ssh/functions.zsh
+source $ROOT_DIR/ssh/functions.zsh
 
 # Bookmark tool
-source $DOT_CONF_DIR/buku/aliases.zsh
-source $DOT_CONF_DIR/buku/functions.zsh
+source $ROOT_DIR/buku/aliases.zsh
+source $ROOT_DIR/buku/functions.zsh
 
 # distractions
 
 ## gtd tools
-source $DOT_CONF_DIR/boom/aliases.zsh
-source $DOT_CONF_DIR/boom/functions.zsh
+source $ROOT_DIR/boom/aliases.zsh
+source $ROOT_DIR/boom/functions.zsh
 
 # gcalcli
-source $DOT_CONF_DIR/gcalcli/functions.sh
+source $ROOT_DIR/gcalcli/functions.sh
 
 # Taskwarrior
-source $DOT_CONF_DIR/task-war/functions.zsh
-source $DOT_CONF_DIR/task-war/aliases.zsh
+source $ROOT_DIR/task-war/functions.zsh
+source $ROOT_DIR/task-war/aliases.zsh
 
 # Watson
-source $DOT_CONF_DIR/watson/functions.zsh
+source $ROOT_DIR/watson/functions.zsh
 
 # Video
-source $DOT_CONF_DIR/video-utils/functions.zsh
+source $ROOT_DIR/video-utils/functions.zsh
 
 # Googler
-# source $DOT_CONF_DIR/googler/googler-completion.zsh
-source $DOT_CONF_DIR/googler/googler_at
+# source $ROOT_DIR/googler/googler-completion.zsh
+source $ROOT_DIR/googler/googler_at
 
 # For work only
-source $DOT_CONF_DIR/work/pp-work.zsh
+source $ROOT_DIR/work/pp-work.zsh
 
 # Wiki dictionary
-source $DOT_CONF_DIR/wkdict/aliases.zsh
+source $ROOT_DIR/wkdict/aliases.zsh
 
 # GPG
-source $DOT_CONF_DIR/gpg/functions.zsh
+source $ROOT_DIR/gpg/functions.zsh
 
 # Font
-source $DOT_CONF_DIR/fonts/functions.zsh
+source $ROOT_DIR/fonts/functions.zsh
 
 # brew
-source $DOT_CONF_DIR/brew/functions.zsh
+source $ROOT_DIR/brew/functions.zsh
 
 # GIT
-source $DOT_CONF_DIR/git/functions.zsh
+source $ROOT_DIR/git/functions.zsh
 
 # GIT Crypt
-source $DOT_CONF_DIR/git-crypt/functions.sh
+source $ROOT_DIR/git-crypt/functions.sh
 
 # OS utils
-source $DOT_CONF_DIR/os_utils/functions.sh
+source $ROOT_DIR/os_utils/functions.sh
 
 # Toggle
-source $DOT_CONF_DIR/toggl/functions.sh
+source $ROOT_DIR/toggl/functions.sh
 
 # K8
-source $DOT_CONF_DIR/k8/kube_cluster_functions.sh
-source $DOT_CONF_DIR/k8/kube_functions.sh
+source $ROOT_DIR/k8/kube_cluster_functions.sh
+source $ROOT_DIR/k8/kube_functions.sh
+
+# getPocket
+source $ROOT_DIR/getpocket/functions.sh
+
+# Real GTD
+source $ROOT_DIR/todo/functions.sh
 
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/util
@@ -246,7 +252,6 @@ autoload -Uz compinit
 # source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 # add autocomplete permanently to your zsh shell
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc'; fi
