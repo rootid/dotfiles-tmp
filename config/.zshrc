@@ -180,6 +180,9 @@ source $ROOT_DIR/getpocket/functions.sh
 # Real GTD
 source $ROOT_DIR/todo/functions.sh
 
+# Freedom
+source $ROOT_DIR/freedom/functions.zsh
+
 CUSTOM_BIN=$HOME/dotfiles/bin
 CUSTOM_UTIL=$HOME/dotfiles/util
 export PATH=$CUSTOM_BIN:$CUSTOM_UTIL:$PATH
