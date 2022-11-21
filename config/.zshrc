@@ -71,6 +71,7 @@ export UPDATE_ZSH_DAYS=5
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git aws)
+# plugins=(git macos aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -261,3 +262,13 @@ if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/path.zsh.inc' ]; then . 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vmat/gen-next/code/bdp/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# To fix zsh security issue
+ZSH_DISABLE_COMPFIX=true
+
+# emulate bash PROMPT_COMMAND (only for zsh)
+precmd() { eval "$PROMPT_COMMAND" }
+## open new terminal in same dir
+PROMPT_COMMAND='pwd > "${HOME}/.cwd"'
+[[ -f "${HOME}/.cwd" ]] && cd "$(< ${HOME}/.cwd)"
